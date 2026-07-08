@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark" lang-active="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Segurança — CarmoViz Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy:     #050505;
+      --graphite: #0c0c0c;
+      --white:    #FFFFFF;
+      --gray:     #9CA3AF;
+      --gold:     #C5A059;
+      --border:   rgba(197, 160, 89, 0.15);
+      --transition: 0.3s ease;
+    }
+    html[data-theme="light"] {
+      --navy:     #F4F1EA;
+      --graphite: #EAE6DC;
+      --white:    #1C1813;
+      --gray:     #554F47;
+      --border:   rgba(197, 160, 89, 0.3);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--navy);
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      line-height: 1.8;
+      font-size: 0.95rem;
+      padding: 40px 24px;
+      transition: background-color var(--transition), color var(--transition);
+    }
+    .container { max-width: 900px; margin: 0 auto; }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 30px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 50px;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .logo { display: flex; align-items: center; color: var(--white); text-decoration: none; }
+    .logo svg { width: 175px; height: auto; }
+    .legal-header-right { display: flex; align-items: center; gap: 24px; }
+    .theme-btn {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--white);
+      border-radius: 9999px;
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: border-color var(--transition), color var(--transition);
+    }
+    .theme-btn:hover { border-color: var(--gold); color: var(--gold); }
+    .theme-ico { width: 16px; height: 16px; }
+    .theme-ico-sun { display: none; }
+    html[data-theme="light"] .theme-ico-moon { display: none; }
+    html[data-theme="light"] .theme-ico-sun  { display: block; }
+    .lang-toggle {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+    }
+    .lang-btn { cursor: pointer; color: var(--gray); transition: color var(--transition); user-select: none; }
+    .lang-btn.active { color: var(--gold); font-weight: 700; }
+    .divider-bar { color: rgba(156, 163, 175, 0.25); }
+    .back-link {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-decoration: none;
+      transition: transform var(--transition);
+      display: inline-flex;
+      align-items: center;
+    }
+    .back-link:hover { transform: translateX(-3px); }
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 200;
+      font-size: 2.2rem;
+      letter-spacing: 0.08em;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      border-left: 3px solid var(--gold);
+      padding-left: 16px;
+    }
+    h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 1.2rem;
+      letter-spacing: 0.05em;
+      margin-top: 45px;
+      margin-bottom: 20px;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+    p { color: var(--gray); margin-bottom: 20px; font-weight: 300; }
+    ul { list-style-type: none; margin-bottom: 30px; }
+    li { position: relative; padding-left: 20px; color: var(--gray); margin-bottom: 10px; }
+    li::before { content: '✦'; position: absolute; left: 0; color: var(--gold); font-size: 0.7rem; }
+    footer {
+      margin-top: 80px;
+      padding-top: 40px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+    }
+    .footer-logo { margin-bottom: 24px; }
+    .footer-logo svg { width: 130px; height: auto; color: var(--white); }
+    .footer-legal-title {
+      color: #ff3344;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+    .footer-links-row { display: flex; justify-content: flex-start; align-items: center; gap: 20px 32px; flex-wrap: wrap; margin-bottom: 36px; width: 100%; }
+    .footer-links-row a {
+      font-size: 0.7rem;
+      color: rgba(156, 163, 175, 0.6);
+      text-decoration: none;
+      transition: color var(--transition);
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 0.05em;
+      font-weight: 500;
+    }
+    .footer-links-row a:hover { color: var(--gold); }
+    .footer-copy { font-size: 0.7rem; color: rgba(156,163,175,0.4); letter-spacing: 0.1em; margin-bottom: 24px; }
+    .footer-divider { width: 100%; height: 1px; background: rgba(156, 163, 175, 0.15); margin-bottom: 24px; }
+    .footer-bottom-row { display: flex; justify-content: space-between; align-items: center; width: 100%; flex-wrap: wrap; gap: 16px; }
+    .footer-info { font-size: 0.68rem; color: rgba(156, 163, 175, 0.5); letter-spacing: 0.05em; font-family: 'Montserrat', sans-serif; }
+    .footer-socials { display: flex; align-items: center; gap: 16px; }
+    .footer-socials a {
+      font-size: 0.68rem;
+      color: rgba(156, 163, 175, 0.7);
+      text-decoration: none;
+      transition: color var(--transition);
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 0.05em;
+    }
+    .footer-socials a:hover { color: var(--gold); }
+    .footer-link-sep { color: rgba(156, 163, 175, 0.3); font-size: 0.68rem; user-select: none; }
+    @media (max-width: 640px) {
+      footer { align-items: center; text-align: center; }
+      .footer-links-row { justify-content: center; }
+      .footer-bottom-row { flex-direction: column; gap: 12px; }
+    }
+    ::selection { background: var(--gold); color: #000000; }
+    ::-moz-selection { background: var(--gold); color: #000000; }
+    html[lang-active="pt"] .lang-en { display: none !important; }
+    html[lang-active="en"] .lang-pt { display: none !important; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="legal-header">
+      <a href="index.html" class="logo">
+        <svg viewBox="0 0 280 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g transform="translate(20,28) scale(0.011) translate(-1999.47,-2007.13)">
+            <polygon fill="currentColor" points="3545.94,1114.27 1999.47,221.42 453,1114.27 453,2899.99 1999.47,3792.84 3545.94,2899.99 3112.93,2649.99 1999.47,3292.84 886.01,2649.99 886.01,1364.27 1999.47,721.42 3112.93,1364.27"/>
+          </g>
+          <text x="46" y="34" font-family="Montserrat, sans-serif" font-size="16" letter-spacing="3" fill="currentColor" text-anchor="start">
+            <tspan font-weight="600">CARMOVIZ</tspan> <tspan font-weight="200" opacity="0.8">STUDIO</tspan>
+          </text>
+        </svg>
+      </a>
+      <div class="legal-header-right">
+        <button id="theme-toggle" class="theme-btn" aria-label="Alterar tema">
+          <svg class="theme-ico theme-ico-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="theme-ico theme-ico-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <div class="lang-toggle">
+          <span class="lang-btn" data-lang="pt">PT</span>
+          <span class="divider-bar">|</span>
+          <span class="lang-btn" data-lang="en">EN</span>
+        </div>
+        <a href="index.html" class="back-link">← Início / Home</a>
+      </div>
+    </header>
+
+    <div class="lang-pt">
+      <h1>Segurança das Informações</h1>
+      <p>Nosso compromisso contínuo é proteger os servidores e a infraestrutura de dados que servem para apoiar nossos clientes no desenvolvimento e entrega de maquetes 3D.</p>
+      
+      <h2>1. Transferência Segura</h2>
+      <p>Garantimos canais de transferência de arquivos criptografados (SSL/TLS) para o recebimento de arquivos técnicos CAD, imagens e briefings.</p>
+
+      <h2>2. Armazenamento Seguro</h2>
+      <p>Nossos backups de segurança mantêm os projetos armazenados localmente e na nuvem de forma redundante e protegida.</p>
+    </div>
+
+    <div class="lang-en">
+      <h1>Information Security</h1>
+      <p>Our continuous commitment is to protect the servers and data infrastructure used to support our clients in the development and delivery of 3D renderings.</p>
+      
+      <h2>1. Secure Transfer</h2>
+      <p>We guarantee encrypted file transfer channels (SSL/TLS) for receiving technical CAD files, images, and briefings.</p>
+
+      <h2>2. Secure Storage</h2>
+      <p>Our safety backups keep projects stored locally and in the cloud in a redundant and protected manner.</p>
+    </div>
+
+    <footer>
+      <div class="footer-legal-title">LEGAL</div>
+      <div class="footer-links-row">
+        <a href="centro-juridico.html" id="footer-link-trust">
+          <span class="lang-pt">Centro Jurídico e de Confiança</span>
+          <span class="lang-en">Legal & Trust Center</span>
+        </a>
+        <a href="termos.html" id="footer-link-terms">
+          <span class="lang-pt">Termos de Uso</span>
+          <span class="lang-en">Terms of Use</span>
+        </a>
+        <a href="privacidade.html" id="footer-link-privacy">
+          <span class="lang-pt">Política de Privacidade</span>
+          <span class="lang-en">Privacy Policy</span>
+        </a>
+        <a href="cookies.html" id="footer-link-cookies">
+          <span class="lang-pt">Política de Cookies</span>
+          <span class="lang-en">Cookie Policy</span>
+        </a>
+        <a href="propriedade-intelectual.html" id="footer-link-ip">
+          <span class="lang-pt">Propriedade Intelectual</span>
+          <span class="lang-en">Intellectual Property</span>
+        </a>
+        <a href="confidencialidade.html" id="footer-link-conf">
+          <span class="lang-pt">Confidencialidade do Cliente</span>
+          <span class="lang-en">Client Confidentiality</span>
+        </a>
+        <a href="acessibilidade.html" id="footer-link-access">
+          <span class="lang-pt">Acessibilidade</span>
+          <span class="lang-en">Accessibility</span>
+        </a>
+        <a href="seguranca.html" id="footer-link-security">
+          <span class="lang-pt">Segurança</span>
+          <span class="lang-en">Security</span>
+        </a>
+        <a href="index.html#contact" id="footer-link-contact">
+          <span class="lang-pt">Contato</span>
+          <span class="lang-en">Contact</span>
+        </a>
+      </div>
+      <div class="footer-divider"></div>
+      <p class="footer-copy">
+        <span class="lang-pt">© 2026 CarmoViz Studio. Todos os direitos reservados.</span>
+        <span class="lang-en">© 2026 CarmoViz Studio. All rights reserved.</span>
+      </p>
+      <div class="footer-bottom-row">
+        <div class="footer-info" id="footer-info">
+          <span class="lang-pt">Carmoviz Studio LTDA · CNPJ: 67.898.739/0001-33 · 2026</span>
+          <span class="lang-en">Carmoviz Studio LTDA · CNPJ: 67.898.739/0001-33 · 2026</span>
+        </div>
+        <div class="footer-socials" id="footer-socials">
+          <a href="https://instagram.com/carmoviz" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <span class="footer-link-sep">·</span>
+          <a href="https://www.linkedin.com/in/carmovinicius/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Theme logic
+    const savedTheme = localStorage.getItem('cv-theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    const themeBtn = document.getElementById('theme-toggle');
+    if (themeBtn) {
+      themeBtn.addEventListener('click', () => {
+        const current = document.documentElement.getAttribute('data-theme') || 'dark';
+        const next = current === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('cv-theme', next);
+      });
+    }
+
+    // Language logic
+    const savedLang = localStorage.getItem('carmoviz-lang') || 'pt';
+    document.documentElement.setAttribute('lang-active', savedLang);
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      if (btn.dataset.lang === savedLang) btn.classList.add('active');
+      btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        document.documentElement.setAttribute('lang-active', lang);
+        localStorage.setItem('carmoviz-lang', lang);
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+      });
+    });
+  </script>
+</body>
+</html>
