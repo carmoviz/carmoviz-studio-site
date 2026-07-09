@@ -699,11 +699,15 @@ function initStatsInteractive() {
   const nums = grid.querySelectorAll('.stat-num[data-count]');
   const run  = () => nums.forEach(el => animateCount(el, parseInt(el.dataset.count, 10), 1100));
 
+  // Rebuilds (ex: troca de idioma) substituem os elementos — descarta
+  // qualquer observer antigo, que ainda apontaria para nós órfãos.
+  if (grid._countObs) { grid._countObs.disconnect(); grid._countObs = null; }
+
   const r = grid.getBoundingClientRect();
   const inView = r.top < window.innerHeight && r.bottom > 0;
   if (inView) {
     run();
-  } else if (!grid._countObs) {
+  } else {
     grid._countObs = new IntersectionObserver((entries, obs) => {
       if (entries[0].isIntersecting) { run(); obs.disconnect(); grid._countObs = null; }
     }, { threshold: 0.3 });
