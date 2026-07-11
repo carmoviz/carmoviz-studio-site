@@ -3,7 +3,84 @@
    ============================================================ */
 
 let currentLang = 'pt';
+let selectedCountry = null;
 let projects = [];
+
+/* Bandeira (emoji) a partir do código ISO 3166-1 alpha-2 */
+function flagEmoji(iso2) {
+  return String.fromCodePoint(...[...iso2.toUpperCase()].map(c => 0x1F1E6 + c.charCodeAt(0) - 65));
+}
+
+const COUNTRIES = [
+  { iso2: 'BR', dial: '55',  pt: 'Brasil',                en: 'Brazil' },
+  { iso2: 'US', dial: '1',   pt: 'Estados Unidos',        en: 'United States' },
+  { iso2: 'PT', dial: '351', pt: 'Portugal',              en: 'Portugal' },
+  { iso2: 'AR', dial: '54',  pt: 'Argentina',             en: 'Argentina' },
+  { iso2: 'UY', dial: '598', pt: 'Uruguai',               en: 'Uruguay' },
+  { iso2: 'PY', dial: '595', pt: 'Paraguai',              en: 'Paraguay' },
+  { iso2: 'CL', dial: '56',  pt: 'Chile',                 en: 'Chile' },
+  { iso2: 'BO', dial: '591', pt: 'Bolívia',               en: 'Bolivia' },
+  { iso2: 'PE', dial: '51',  pt: 'Peru',                  en: 'Peru' },
+  { iso2: 'CO', dial: '57',  pt: 'Colômbia',              en: 'Colombia' },
+  { iso2: 'VE', dial: '58',  pt: 'Venezuela',             en: 'Venezuela' },
+  { iso2: 'EC', dial: '593', pt: 'Equador',               en: 'Ecuador' },
+  { iso2: 'MX', dial: '52',  pt: 'México',                en: 'Mexico' },
+  { iso2: 'CA', dial: '1',   pt: 'Canadá',                en: 'Canada' },
+  { iso2: 'GB', dial: '44',  pt: 'Reino Unido',           en: 'United Kingdom' },
+  { iso2: 'IE', dial: '353', pt: 'Irlanda',               en: 'Ireland' },
+  { iso2: 'FR', dial: '33',  pt: 'França',                en: 'France' },
+  { iso2: 'ES', dial: '34',  pt: 'Espanha',               en: 'Spain' },
+  { iso2: 'DE', dial: '49',  pt: 'Alemanha',              en: 'Germany' },
+  { iso2: 'IT', dial: '39',  pt: 'Itália',                en: 'Italy' },
+  { iso2: 'NL', dial: '31',  pt: 'Países Baixos',         en: 'Netherlands' },
+  { iso2: 'BE', dial: '32',  pt: 'Bélgica',               en: 'Belgium' },
+  { iso2: 'LU', dial: '352', pt: 'Luxemburgo',            en: 'Luxembourg' },
+  { iso2: 'CH', dial: '41',  pt: 'Suíça',                 en: 'Switzerland' },
+  { iso2: 'AT', dial: '43',  pt: 'Áustria',               en: 'Austria' },
+  { iso2: 'PL', dial: '48',  pt: 'Polônia',               en: 'Poland' },
+  { iso2: 'CZ', dial: '420', pt: 'República Tcheca',      en: 'Czech Republic' },
+  { iso2: 'SE', dial: '46',  pt: 'Suécia',                en: 'Sweden' },
+  { iso2: 'NO', dial: '47',  pt: 'Noruega',               en: 'Norway' },
+  { iso2: 'DK', dial: '45',  pt: 'Dinamarca',             en: 'Denmark' },
+  { iso2: 'FI', dial: '358', pt: 'Finlândia',             en: 'Finland' },
+  { iso2: 'IS', dial: '354', pt: 'Islândia',              en: 'Iceland' },
+  { iso2: 'GR', dial: '30',  pt: 'Grécia',                en: 'Greece' },
+  { iso2: 'TR', dial: '90',  pt: 'Turquia',               en: 'Turkey' },
+  { iso2: 'RU', dial: '7',   pt: 'Rússia',                en: 'Russia' },
+  { iso2: 'UA', dial: '380', pt: 'Ucrânia',               en: 'Ukraine' },
+  { iso2: 'RO', dial: '40',  pt: 'Romênia',               en: 'Romania' },
+  { iso2: 'HU', dial: '36',  pt: 'Hungria',               en: 'Hungary' },
+  { iso2: 'HR', dial: '385', pt: 'Croácia',               en: 'Croatia' },
+  { iso2: 'RS', dial: '381', pt: 'Sérvia',                en: 'Serbia' },
+  { iso2: 'AE', dial: '971', pt: 'Emirados Árabes Unidos', en: 'United Arab Emirates' },
+  { iso2: 'SA', dial: '966', pt: 'Arábia Saudita',        en: 'Saudi Arabia' },
+  { iso2: 'QA', dial: '974', pt: 'Catar',                 en: 'Qatar' },
+  { iso2: 'KW', dial: '965', pt: 'Kuwait',                en: 'Kuwait' },
+  { iso2: 'IL', dial: '972', pt: 'Israel',                en: 'Israel' },
+  { iso2: 'EG', dial: '20',  pt: 'Egito',                 en: 'Egypt' },
+  { iso2: 'ZA', dial: '27',  pt: 'África do Sul',         en: 'South Africa' },
+  { iso2: 'NG', dial: '234', pt: 'Nigéria',               en: 'Nigeria' },
+  { iso2: 'KE', dial: '254', pt: 'Quênia',                en: 'Kenya' },
+  { iso2: 'MA', dial: '212', pt: 'Marrocos',              en: 'Morocco' },
+  { iso2: 'AO', dial: '244', pt: 'Angola',                en: 'Angola' },
+  { iso2: 'MZ', dial: '258', pt: 'Moçambique',            en: 'Mozambique' },
+  { iso2: 'CV', dial: '238', pt: 'Cabo Verde',            en: 'Cape Verde' },
+  { iso2: 'IN', dial: '91',  pt: 'Índia',                 en: 'India' },
+  { iso2: 'CN', dial: '86',  pt: 'China',                 en: 'China' },
+  { iso2: 'JP', dial: '81',  pt: 'Japão',                 en: 'Japan' },
+  { iso2: 'KR', dial: '82',  pt: 'Coreia do Sul',         en: 'South Korea' },
+  { iso2: 'SG', dial: '65',  pt: 'Cingapura',             en: 'Singapore' },
+  { iso2: 'HK', dial: '852', pt: 'Hong Kong',             en: 'Hong Kong' },
+  { iso2: 'TW', dial: '886', pt: 'Taiwan',                en: 'Taiwan' },
+  { iso2: 'TH', dial: '66',  pt: 'Tailândia',             en: 'Thailand' },
+  { iso2: 'VN', dial: '84',  pt: 'Vietnã',                en: 'Vietnam' },
+  { iso2: 'MY', dial: '60',  pt: 'Malásia',               en: 'Malaysia' },
+  { iso2: 'ID', dial: '62',  pt: 'Indonésia',             en: 'Indonesia' },
+  { iso2: 'PH', dial: '63',  pt: 'Filipinas',             en: 'Philippines' },
+  { iso2: 'PK', dial: '92',  pt: 'Paquistão',             en: 'Pakistan' },
+  { iso2: 'AU', dial: '61',  pt: 'Austrália',             en: 'Australia' },
+  { iso2: 'NZ', dial: '64',  pt: 'Nova Zelândia',         en: 'New Zealand' },
+];
 let modalProject = null;
 let modalProjectIndex = 0;
 let modalIndex = 0;
@@ -245,6 +322,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   initMobileMenu();
   initCustomSelect();
   initServiceSelect();
+  initCountrySelect();
   initContactForm();
 });
 
@@ -754,11 +832,83 @@ function buildContact() {
   }
 
   const fPhone = document.getElementById('form-phone');
-  if (fPhone) fPhone.placeholder = en ? '+55 (00) 00000-0000' : '(00) 00000-0000';
+  if (fPhone) fPhone.placeholder = en ? '(00) 00000-0000' : '(00) 00000-0000';
   const fType = document.getElementById('form-type');
   if (fType) fType.placeholder = en ? 'e.g. Residential' : 'ex.: Residencial';
   const fMsg = document.getElementById('form-msg');
   if (fMsg) fMsg.placeholder = en ? 'Tell us about your project…' : 'Conte sobre o seu projeto…';
+
+  const countryTrigger = document.getElementById('country-trigger');
+  if (countryTrigger) countryTrigger.setAttribute('aria-label', en ? 'Country' : 'País');
+  const countrySearch = document.getElementById('country-search');
+  if (countrySearch) countrySearch.placeholder = en ? 'Search country…' : 'Buscar país…';
+  const countryWrap = document.getElementById('country-select');
+  if (countryWrap && countryWrap._ccRenderList) countryWrap._ccRenderList(countrySearch ? countrySearch.value : '');
+}
+
+/* Seletor de país (bandeira + DDI) do campo de telefone */
+function initCountrySelect() {
+  const wrap     = document.getElementById('country-select');
+  const trigger  = document.getElementById('country-trigger');
+  const flagEl   = document.getElementById('country-flag');
+  const codeEl   = document.getElementById('country-code');
+  const dropdown = document.getElementById('country-dropdown');
+  const searchEl = document.getElementById('country-search');
+  const listEl   = document.getElementById('country-list');
+  if (!wrap || wrap._ccInit) return;
+  wrap._ccInit = true;
+
+  selectedCountry = COUNTRIES[0]; // Brasil por padrão
+
+  const selectCountry = (c) => {
+    selectedCountry = c;
+    flagEl.textContent = flagEmoji(c.iso2);
+    codeEl.textContent = `+${c.dial}`;
+  };
+
+  const renderList = (query) => {
+    const en = currentLang === 'en';
+    const q = (query || '').trim().toLowerCase();
+    const filtered = COUNTRIES.filter(c => {
+      const name = (en ? c.en : c.pt).toLowerCase();
+      return !q || name.includes(q) || c.dial.includes(q);
+    });
+    listEl.innerHTML = filtered.length ? filtered.map(c => `
+      <div class="cf-country-option${c === selectedCountry ? ' active' : ''}" data-iso2="${c.iso2}" role="option">
+        <span class="cf-country-flag">${flagEmoji(c.iso2)}</span>
+        <span class="cf-country-option-name">${en ? c.en : c.pt}</span>
+        <span class="cf-country-option-dial">+${c.dial}</span>
+      </div>`).join('') : `<div class="cf-country-empty">${en ? 'No country found' : 'Nenhum país encontrado'}</div>`;
+
+    listEl.querySelectorAll('.cf-country-option').forEach(opt => {
+      opt.addEventListener('click', () => {
+        const c = COUNTRIES.find(x => x.iso2 === opt.dataset.iso2);
+        if (c) selectCountry(c);
+        wrap.classList.remove('open');
+      });
+    });
+  };
+
+  trigger.addEventListener('click', e => {
+    e.stopPropagation();
+    const open = wrap.classList.toggle('open');
+    trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (open) {
+      searchEl.value = '';
+      renderList('');
+      setTimeout(() => searchEl.focus(), 0);
+    }
+  });
+  document.addEventListener('click', () => {
+    wrap.classList.remove('open');
+    trigger.setAttribute('aria-expanded', 'false');
+  });
+  dropdown.addEventListener('click', e => e.stopPropagation());
+  searchEl.addEventListener('input', () => renderList(searchEl.value));
+
+  wrap._ccRenderList = renderList;
+  wrap._ccReset = () => selectCountry(COUNTRIES[0]);
+  selectCountry(selectedCountry);
 }
 
 function initContactForm() {
@@ -775,7 +925,8 @@ function initContactForm() {
     // Get input values
     const company = document.getElementById('form-name').value.trim();
     const email = document.getElementById('form-email').value.trim();
-    const phone = document.getElementById('form-phone').value.trim();
+    const phoneLocal = document.getElementById('form-phone').value.trim();
+    const phone = phoneLocal ? `+${selectedCountry.dial} ${phoneLocal}` : '';
     const service = document.getElementById('form-service').value;
     const projectType = document.getElementById('form-type').value.trim();
     const message = document.getElementById('form-msg').value.trim();
@@ -813,6 +964,8 @@ function initContactForm() {
         form.reset();
         refreshCustomSelect();
         refreshServiceSelect();
+        const countryWrap = document.getElementById('country-select');
+        if (countryWrap && countryWrap._ccReset) countryWrap._ccReset();
       } else {
         throw new Error('Server error');
       }
