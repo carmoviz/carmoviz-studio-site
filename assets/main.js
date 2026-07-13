@@ -949,6 +949,15 @@ function initContactForm() {
       "Mensagem / Message": message || 'Sem mensagem / No message'
     };
 
+    // Envia o lead também para o CarmoViz OS (entra direto no funil "Novo Lead").
+    // Fire-and-forget: não bloqueia nem afeta o envio ao FormSubmit se falhar.
+    fetch('https://app.carmoviz.com/api/leads/c1a6481d76403a7a04f1d7db352bb0c7f7a87863b5dcecd7', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+      keepalive: true
+    }).catch(() => {});
+
     try {
       const response = await fetch('https://formsubmit.co/ajax/contato@carmoviz.com', {
         method: 'POST',
