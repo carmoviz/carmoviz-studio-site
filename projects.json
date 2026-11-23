@@ -1,6 +1,684 @@
 {
   "projects": [
     {
+      "slug": "casa-rosiane",
+      "category": "residencial",
+      "title": {
+        "pt": "Casa Rosiane",
+        "en": "Rosiane House"
+      },
+      "location": {
+        "pt": "Porto Seguro, Bahia",
+        "en": "Porto Seguro, Brazil"
+      },
+      "images": [
+        {
+          "src": "images/work/casa-rosiane/01.webp",
+          "thumb": "images/work/casa-rosiane/01-t.webp",
+          "w": 2752,
+          "h": 1536
+        },
+        {
+          "src": "images/work/casa-rosiane/02.webp",
+          "thumb": "images/work/casa-rosiane/02-t.webp",
+          "w": 2752,
+          "h": 1536
+        },
+        {
+          "src": "images/work/casa-rosiane/03.webp",
+          "thumb": "images/work/casa-rosiane/03-t.webp",
+          "w": 2752,
+          "h": 1536
+        },
+        {
+          "src": "images/work/casa-rosiane/04.webp",
+          "thumb": "images/work/casa-rosiane/04-t.webp",
+          "w": 2752,
+          "h": 1536
+        },
+        {
+          "src": "images/work/casa-rosiane/05.webp",
+          "thumb": "images/work/casa-rosiane/05-t.webp",
+          "w": 2752,
+          "h": 1536
+        },
+        {
+          "src": "images/work/casa-rosiane/06.webp",
+          "thumb": "images/work/casa-rosiane/06-t.webp",
+          "w": 2752,
+          "h": 1536
+        },
+        {
+          "src": "images/work/casa-rosiane/07.webp",
+          "thumb": "images/work/casa-rosiane/07-t.webp",
+          "w": 2752,
+          "h": 1536
+        },
+        {
+          "src": "images/work/casa-rosiane/08.webp",
+          "thumb": "images/work/casa-rosiane/08-t.webp",
+          "w": 2752,
+          "h": 1536
+        },
+        {
+          "src": "images/work/casa-rosiane/09.webp",
+          "thumb": "images/work/casa-rosiane/09-t.webp",
+          "w": 2752,
+          "h": 1536
+        },
+        {
+          "src": "images/work/casa-rosiane/10.webp",
+          "thumb": "images/work/casa-rosiane/10-t.webp",
+          "w": 2752,
+          "h": 1536
+        },
+        {
+          "src": "images/work/casa-rosiane/11.webp",
+          "thumb": "images/work/casa-rosiane/11-t.webp",
+          "w": 2752,
+          "h": 1536
+        },
+        {
+          "src": "images/work/casa-rosiane/12.webp",
+          "thumb": "images/work/casa-rosiane/12-t.webp",
+          "w": 2752,
+          "h": 1536
+        },
+        {
+          "src": "images/work/casa-rosiane/13.webp",
+          "thumb": "images/work/casa-rosiane/13-t.webp",
+          "w": 2752,
+          "h": 1536
+        },
+        {
+          "src": "images/work/casa-rosiane/14.webp",
+          "thumb": "images/work/casa-rosiane/14-t.webp",
+          "w": 2400,
+          "h": 1792
+        }
+      ],
+      "videos": []
+    },
+    {
+      "slug": "vista-da-mata",
+      "category": "empreendimento",
+      "title": {
+        "pt": "Vista da Mata Residencial",
+        "en": "Vista da Mata Residences"
+      },
+      "location": {
+        "pt": "",
+        "en": ""
+      },
+      "images": [
+        {
+          "src": "images/work/vista-da-mata/01.webp",
+          "thumb": "images/work/vista-da-mata/01-t.webp",
+          "w": 2752,
+          "h": 1536
+        },
+        {
+          "src": "images/work/vista-da-mata/02.webp",
+          "thumb": "images/work/vista-da-mata/02-t.webp",
+          "w": 2752,
+          "h": 1536
+        },
+        {
+          "src": "images/work/vista-da-mata/03.webp",
+          "thumb": "images/work/vista-da-mata/03-t.webp",
+          "w": 2752,
+          "h": 1536
+        },
+        {
+          "src": "images/work/vista-da-mata/04.webp",
+          "thumb": "images/work/vista-da-mata/04-t.webp",
+          "w": 2752,
+          "h": 1536
+        },
+        {
+          "src": "images/work/vista-da-mata/05.webp",
+          "thumb": "images/work/vista-da-mata/05-t.webp",
+          "w": 2752,
+          "h": 1536
+        },
+        {
+          "src": "images/work/vista-da-mata/06.webp",
+          "thumb": "images/work/vista-da-mata/06-t.webp",
+          "w": 2752,
+          "h": 1536
+        },
+        {
+          "src": "images/work/vista-da-mata/07.webp",
+          "thumb": "images/work/vista-da-mata/07-t.webp",
+          "w": 2752,
+          "h": 1536
+        },
+        {
+          "src": "images/work/vista-da-mata/08.webp",
+          "thumb": "images/work/vista-da-mata/08-t.webp",
+          "w": 2752,
+          "h": 1536
+        },
+        {
+          "src": "images/work/vista-da-mata/09.webp",
+          "thumb": "images/work/vista-da-mata/09-t.webp",
+          "w": 2752,
+          "h": 1536
+        },
+        {
+          "src": "images/work/vista-da-mata/10.webp",
+          "thumb": "images/work/vista-da-mata/10-t.webp",
+          "w": 2752,
+          "h": 1536
+        },
+        {
+          "src": "images/work/vista-da-mata/11.webp",
+          "thumb": "images/work/vista-da-mata/11-t.webp",
+          "w": 2752,
+          "h": 1536
+        },
+        {
+          "src": "images/work/vista-da-mata/12.webp",
+          "thumb": "images/work/vista-da-mata/12-t.webp",
+          "w": 2752,
+          "h": 1536
+        },
+        {
+          "src": "images/work/vista-da-mata/13.webp",
+          "thumb": "images/work/vista-da-mata/13-t.webp",
+          "w": 2752,
+          "h": 1536
+        }
+      ],
+      "videos": []
+    },
+    {
+      "slug": "residencia-vidal",
+      "category": "residencial",
+      "title": {
+        "pt": "Residência Vidal",
+        "en": "Vidal Residence"
+      },
+      "location": {
+        "pt": "",
+        "en": ""
+      },
+      "images": [
+        {
+          "src": "images/work/residencia-vidal/01.webp",
+          "thumb": "images/work/residencia-vidal/01-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/residencia-vidal/02.webp",
+          "thumb": "images/work/residencia-vidal/02-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/residencia-vidal/03.webp",
+          "thumb": "images/work/residencia-vidal/03-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/residencia-vidal/04.webp",
+          "thumb": "images/work/residencia-vidal/04-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/residencia-vidal/05.webp",
+          "thumb": "images/work/residencia-vidal/05-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/residencia-vidal/06.webp",
+          "thumb": "images/work/residencia-vidal/06-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/residencia-vidal/07.webp",
+          "thumb": "images/work/residencia-vidal/07-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/residencia-vidal/08.webp",
+          "thumb": "images/work/residencia-vidal/08-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/residencia-vidal/09.webp",
+          "thumb": "images/work/residencia-vidal/09-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/residencia-vidal/10.webp",
+          "thumb": "images/work/residencia-vidal/10-t.webp",
+          "w": 1792,
+          "h": 2400
+        }
+      ],
+      "videos": []
+    },
+    {
+      "slug": "casa-neto",
+      "category": "residencial",
+      "title": {
+        "pt": "Casa Neto",
+        "en": "Neto House"
+      },
+      "location": {
+        "pt": "",
+        "en": ""
+      },
+      "images": [
+        {
+          "src": "images/work/casa-neto/01.webp",
+          "thumb": "images/work/casa-neto/01-t.webp",
+          "w": 3093,
+          "h": 3840
+        },
+        {
+          "src": "images/work/casa-neto/02.webp",
+          "thumb": "images/work/casa-neto/02-t.webp",
+          "w": 3093,
+          "h": 3840
+        },
+        {
+          "src": "images/work/casa-neto/03.webp",
+          "thumb": "images/work/casa-neto/03-t.webp",
+          "w": 3093,
+          "h": 3840
+        },
+        {
+          "src": "images/work/casa-neto/04.webp",
+          "thumb": "images/work/casa-neto/04-t.webp",
+          "w": 3093,
+          "h": 3840
+        },
+        {
+          "src": "images/work/casa-neto/05.webp",
+          "thumb": "images/work/casa-neto/05-t.webp",
+          "w": 3093,
+          "h": 3840
+        },
+        {
+          "src": "images/work/casa-neto/06.webp",
+          "thumb": "images/work/casa-neto/06-t.webp",
+          "w": 3093,
+          "h": 3840
+        },
+        {
+          "src": "images/work/casa-neto/07.webp",
+          "thumb": "images/work/casa-neto/07-t.webp",
+          "w": 3093,
+          "h": 3840
+        },
+        {
+          "src": "images/work/casa-neto/08.webp",
+          "thumb": "images/work/casa-neto/08-t.webp",
+          "w": 3093,
+          "h": 3840
+        }
+      ],
+      "videos": []
+    },
+    {
+      "slug": "residencial-caju",
+      "category": "empreendimento",
+      "title": {
+        "pt": "Residencial Caju",
+        "en": "Caju Residences"
+      },
+      "location": {
+        "pt": "",
+        "en": ""
+      },
+      "images": [
+        {
+          "src": "images/work/residencial-caju/01.webp",
+          "thumb": "images/work/residencial-caju/01-t.webp",
+          "w": 3182,
+          "h": 3840
+        },
+        {
+          "src": "images/work/residencial-caju/02.webp",
+          "thumb": "images/work/residencial-caju/02-t.webp",
+          "w": 3093,
+          "h": 3840
+        },
+        {
+          "src": "images/work/residencial-caju/03.webp",
+          "thumb": "images/work/residencial-caju/03-t.webp",
+          "w": 3093,
+          "h": 3840
+        },
+        {
+          "src": "images/work/residencial-caju/04.webp",
+          "thumb": "images/work/residencial-caju/04-t.webp",
+          "w": 3090,
+          "h": 3840
+        },
+        {
+          "src": "images/work/residencial-caju/05.webp",
+          "thumb": "images/work/residencial-caju/05-t.webp",
+          "w": 3090,
+          "h": 3840
+        },
+        {
+          "src": "images/work/residencial-caju/06.webp",
+          "thumb": "images/work/residencial-caju/06-t.webp",
+          "w": 3093,
+          "h": 3840
+        },
+        {
+          "src": "images/work/residencial-caju/07.webp",
+          "thumb": "images/work/residencial-caju/07-t.webp",
+          "w": 3093,
+          "h": 3840
+        },
+        {
+          "src": "images/work/residencial-caju/08.webp",
+          "thumb": "images/work/residencial-caju/08-t.webp",
+          "w": 3840,
+          "h": 2143
+        },
+        {
+          "src": "images/work/residencial-caju/09.webp",
+          "thumb": "images/work/residencial-caju/09-t.webp",
+          "w": 3093,
+          "h": 3840
+        },
+        {
+          "src": "images/work/residencial-caju/10.webp",
+          "thumb": "images/work/residencial-caju/10-t.webp",
+          "w": 3093,
+          "h": 3840
+        },
+        {
+          "src": "images/work/residencial-caju/11.webp",
+          "thumb": "images/work/residencial-caju/11-t.webp",
+          "w": 3093,
+          "h": 3840
+        },
+        {
+          "src": "images/work/residencial-caju/12.webp",
+          "thumb": "images/work/residencial-caju/12-t.webp",
+          "w": 3093,
+          "h": 3840
+        }
+      ],
+      "videos": []
+    },
+    {
+      "slug": "porto-princesa",
+      "category": "empreendimento",
+      "title": {
+        "pt": "Porto Princesa",
+        "en": "Porto Princesa"
+      },
+      "location": {
+        "pt": "Porto Seguro, Bahia",
+        "en": "Porto Seguro, Brazil"
+      },
+      "images": [
+        {
+          "src": "images/work/porto-princesa/01.webp",
+          "thumb": "images/work/porto-princesa/01-t.webp",
+          "w": 2752,
+          "h": 1536
+        },
+        {
+          "src": "images/work/porto-princesa/02.webp",
+          "thumb": "images/work/porto-princesa/02-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/porto-princesa/03.webp",
+          "thumb": "images/work/porto-princesa/03-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/porto-princesa/04.webp",
+          "thumb": "images/work/porto-princesa/04-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/porto-princesa/05.webp",
+          "thumb": "images/work/porto-princesa/05-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/porto-princesa/06.webp",
+          "thumb": "images/work/porto-princesa/06-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/porto-princesa/07.webp",
+          "thumb": "images/work/porto-princesa/07-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/porto-princesa/08.webp",
+          "thumb": "images/work/porto-princesa/08-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/porto-princesa/09.webp",
+          "thumb": "images/work/porto-princesa/09-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/porto-princesa/10.webp",
+          "thumb": "images/work/porto-princesa/10-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/porto-princesa/11.webp",
+          "thumb": "images/work/porto-princesa/11-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/porto-princesa/12.webp",
+          "thumb": "images/work/porto-princesa/12-t.webp",
+          "w": 1792,
+          "h": 2400
+        }
+      ],
+      "videos": []
+    },
+    {
+      "slug": "summer-ville",
+      "category": "empreendimento",
+      "title": {
+        "pt": "Summer Ville Residence",
+        "en": "Summer Ville Residence"
+      },
+      "location": {
+        "pt": "",
+        "en": ""
+      },
+      "images": [
+        {
+          "src": "images/work/summer-ville/01.webp",
+          "thumb": "images/work/summer-ville/01-t.webp",
+          "w": 3093,
+          "h": 3840
+        },
+        {
+          "src": "images/work/summer-ville/02.webp",
+          "thumb": "images/work/summer-ville/02-t.webp",
+          "w": 3093,
+          "h": 3840
+        },
+        {
+          "src": "images/work/summer-ville/03.webp",
+          "thumb": "images/work/summer-ville/03-t.webp",
+          "w": 3093,
+          "h": 3840
+        },
+        {
+          "src": "images/work/summer-ville/04.webp",
+          "thumb": "images/work/summer-ville/04-t.webp",
+          "w": 3093,
+          "h": 3840
+        },
+        {
+          "src": "images/work/summer-ville/05.webp",
+          "thumb": "images/work/summer-ville/05-t.webp",
+          "w": 3093,
+          "h": 3840
+        },
+        {
+          "src": "images/work/summer-ville/06.webp",
+          "thumb": "images/work/summer-ville/06-t.webp",
+          "w": 3093,
+          "h": 3840
+        },
+        {
+          "src": "images/work/summer-ville/07.webp",
+          "thumb": "images/work/summer-ville/07-t.webp",
+          "w": 3093,
+          "h": 3840
+        },
+        {
+          "src": "images/work/summer-ville/08.webp",
+          "thumb": "images/work/summer-ville/08-t.webp",
+          "w": 3093,
+          "h": 3840
+        },
+        {
+          "src": "images/work/summer-ville/09.webp",
+          "thumb": "images/work/summer-ville/09-t.webp",
+          "w": 3093,
+          "h": 3840
+        },
+        {
+          "src": "images/work/summer-ville/10.webp",
+          "thumb": "images/work/summer-ville/10-t.webp",
+          "w": 3093,
+          "h": 3840
+        },
+        {
+          "src": "images/work/summer-ville/11.webp",
+          "thumb": "images/work/summer-ville/11-t.webp",
+          "w": 3093,
+          "h": 3840
+        },
+        {
+          "src": "images/work/summer-ville/12.webp",
+          "thumb": "images/work/summer-ville/12-t.webp",
+          "w": 2867,
+          "h": 3840
+        }
+      ],
+      "videos": []
+    },
+    {
+      "slug": "reserva-do-bosque",
+      "category": "empreendimento",
+      "title": {
+        "pt": "Reserva do Bosque",
+        "en": "Reserva do Bosque"
+      },
+      "location": {
+        "pt": "",
+        "en": ""
+      },
+      "images": [
+        {
+          "src": "images/work/reserva-do-bosque/01.webp",
+          "thumb": "images/work/reserva-do-bosque/01-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/reserva-do-bosque/02.webp",
+          "thumb": "images/work/reserva-do-bosque/02-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/reserva-do-bosque/03.webp",
+          "thumb": "images/work/reserva-do-bosque/03-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/reserva-do-bosque/04.webp",
+          "thumb": "images/work/reserva-do-bosque/04-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/reserva-do-bosque/05.webp",
+          "thumb": "images/work/reserva-do-bosque/05-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/reserva-do-bosque/06.webp",
+          "thumb": "images/work/reserva-do-bosque/06-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/reserva-do-bosque/07.webp",
+          "thumb": "images/work/reserva-do-bosque/07-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/reserva-do-bosque/08.webp",
+          "thumb": "images/work/reserva-do-bosque/08-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/reserva-do-bosque/09.webp",
+          "thumb": "images/work/reserva-do-bosque/09-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/reserva-do-bosque/10.webp",
+          "thumb": "images/work/reserva-do-bosque/10-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/reserva-do-bosque/11.webp",
+          "thumb": "images/work/reserva-do-bosque/11-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/reserva-do-bosque/12.webp",
+          "thumb": "images/work/reserva-do-bosque/12-t.webp",
+          "w": 1792,
+          "h": 2400
+        }
+      ],
+      "videos": []
+    },
+    {
       "slug": "casa-trancoso",
       "category": "residencial",
       "title": {
@@ -692,140 +1370,230 @@
       "videos": []
     },
     {
-      "slug": "estudos",
-      "category": "estudo",
+      "slug": "torre-residencial",
+      "category": "empreendimento",
       "title": {
-        "pt": "Estudos de Luz e Material",
-        "en": "Light & Material Studies"
+        "pt": "Torre Residencial",
+        "en": "Residential Tower"
       },
       "location": {
-        "pt": "Estúdio CarmoViz",
-        "en": "CarmoViz Studio"
+        "pt": "",
+        "en": ""
       },
       "images": [
         {
-          "src": "images/work/estudos/01.webp",
-          "thumb": "images/work/estudos/01-t.webp",
+          "src": "images/work/torre-residencial/01.webp",
+          "thumb": "images/work/torre-residencial/01-t.webp",
           "w": 2867,
           "h": 3840
         },
         {
-          "src": "images/work/estudos/02.webp",
-          "thumb": "images/work/estudos/02-t.webp",
+          "src": "images/work/torre-residencial/02.webp",
+          "thumb": "images/work/torre-residencial/02-t.webp",
           "w": 2867,
           "h": 3840
-        },
+        }
+      ],
+      "videos": []
+    },
+    {
+      "slug": "edificio-residencial",
+      "category": "empreendimento",
+      "title": {
+        "pt": "Edifício Residencial",
+        "en": "Residential Building"
+      },
+      "location": {
+        "pt": "",
+        "en": ""
+      },
+      "images": [
         {
-          "src": "images/work/estudos/03.webp",
-          "thumb": "images/work/estudos/03-t.webp",
+          "src": "images/work/edificio-residencial/01.webp",
+          "thumb": "images/work/edificio-residencial/01-t.webp",
           "w": 2867,
           "h": 3840
+        }
+      ],
+      "videos": []
+    },
+    {
+      "slug": "casa-com-piscina",
+      "category": "residencial",
+      "title": {
+        "pt": "Casa com Piscina",
+        "en": "Pool House"
+      },
+      "location": {
+        "pt": "",
+        "en": ""
+      },
+      "images": [
+        {
+          "src": "images/work/casa-com-piscina/01.webp",
+          "thumb": "images/work/casa-com-piscina/01-t.webp",
+          "w": 2752,
+          "h": 1536
         },
         {
-          "src": "images/work/estudos/04.webp",
-          "thumb": "images/work/estudos/04-t.webp",
-          "w": 2867,
-          "h": 3840
+          "src": "images/work/casa-com-piscina/02.webp",
+          "thumb": "images/work/casa-com-piscina/02-t.webp",
+          "w": 2752,
+          "h": 1536
         },
         {
-          "src": "images/work/estudos/05.webp",
-          "thumb": "images/work/estudos/05-t.webp",
-          "w": 2867,
-          "h": 3840
-        },
-        {
-          "src": "images/work/estudos/06.webp",
-          "thumb": "images/work/estudos/06-t.webp",
-          "w": 2867,
-          "h": 3840
-        },
-        {
-          "src": "images/work/estudos/07.webp",
-          "thumb": "images/work/estudos/07-t.webp",
-          "w": 2867,
-          "h": 3840
-        },
-        {
-          "src": "images/work/estudos/08.webp",
-          "thumb": "images/work/estudos/08-t.webp",
-          "w": 2867,
-          "h": 3840
-        },
-        {
-          "src": "images/work/estudos/09.webp",
-          "thumb": "images/work/estudos/09-t.webp",
-          "w": 1792,
-          "h": 2400
-        },
-        {
-          "src": "images/work/estudos/10.webp",
-          "thumb": "images/work/estudos/10-t.webp",
-          "w": 1792,
-          "h": 2400
-        },
-        {
-          "src": "images/work/estudos/11.webp",
-          "thumb": "images/work/estudos/11-t.webp",
-          "w": 1792,
-          "h": 2400
-        },
-        {
-          "src": "images/work/estudos/12.webp",
-          "thumb": "images/work/estudos/12-t.webp",
-          "w": 1792,
-          "h": 2400
-        },
-        {
-          "src": "images/work/estudos/13.webp",
-          "thumb": "images/work/estudos/13-t.webp",
-          "w": 1792,
-          "h": 2400
-        },
-        {
-          "src": "images/work/estudos/14.webp",
-          "thumb": "images/work/estudos/14-t.webp",
-          "w": 1792,
-          "h": 2400
-        },
-        {
-          "src": "images/work/estudos/15.webp",
-          "thumb": "images/work/estudos/15-t.webp",
-          "w": 1792,
-          "h": 2400
-        },
-        {
-          "src": "images/work/estudos/16.webp",
-          "thumb": "images/work/estudos/16-t.webp",
+          "src": "images/work/casa-com-piscina/03.webp",
+          "thumb": "images/work/casa-com-piscina/03-t.webp",
           "w": 1264,
           "h": 1600
         },
         {
-          "src": "images/work/estudos/17.webp",
-          "thumb": "images/work/estudos/17-t.webp",
+          "src": "images/work/casa-com-piscina/04.webp",
+          "thumb": "images/work/casa-com-piscina/04-t.webp",
+          "w": 1792,
+          "h": 2400
+        }
+      ],
+      "videos": []
+    },
+    {
+      "slug": "casa-pedra-madeira",
+      "category": "residencial",
+      "title": {
+        "pt": "Casa Pedra e Madeira",
+        "en": "Stone & Timber House"
+      },
+      "location": {
+        "pt": "",
+        "en": ""
+      },
+      "images": [
+        {
+          "src": "images/work/casa-pedra-madeira/01.webp",
+          "thumb": "images/work/casa-pedra-madeira/01-t.webp",
           "w": 2752,
           "h": 1536
         },
         {
-          "src": "images/work/estudos/18.webp",
-          "thumb": "images/work/estudos/18-t.webp",
-          "w": 2752,
-          "h": 1536
+          "src": "images/work/casa-pedra-madeira/02.webp",
+          "thumb": "images/work/casa-pedra-madeira/02-t.webp",
+          "w": 1792,
+          "h": 2400
+        }
+      ],
+      "videos": []
+    },
+    {
+      "slug": "casa-urbana",
+      "category": "residencial",
+      "title": {
+        "pt": "Casa Urbana",
+        "en": "Urban House"
+      },
+      "location": {
+        "pt": "",
+        "en": ""
+      },
+      "images": [
+        {
+          "src": "images/work/casa-urbana/01.webp",
+          "thumb": "images/work/casa-urbana/01-t.webp",
+          "w": 1792,
+          "h": 2400
+        }
+      ],
+      "videos": []
+    },
+    {
+      "slug": "interiores-contemporaneos",
+      "category": "residencial",
+      "title": {
+        "pt": "Interiores Contemporâneos",
+        "en": "Contemporary Interiors"
+      },
+      "location": {
+        "pt": "",
+        "en": ""
+      },
+      "images": [
+        {
+          "src": "images/work/interiores-contemporaneos/01.webp",
+          "thumb": "images/work/interiores-contemporaneos/01-t.webp",
+          "w": 2867,
+          "h": 3840
         },
         {
-          "src": "images/work/estudos/19.webp",
-          "thumb": "images/work/estudos/19-t.webp",
-          "w": 2752,
-          "h": 1536
+          "src": "images/work/interiores-contemporaneos/02.webp",
+          "thumb": "images/work/interiores-contemporaneos/02-t.webp",
+          "w": 2867,
+          "h": 3840
         },
         {
-          "src": "images/work/estudos/20.webp",
-          "thumb": "images/work/estudos/20-t.webp",
+          "src": "images/work/interiores-contemporaneos/03.webp",
+          "thumb": "images/work/interiores-contemporaneos/03-t.webp",
+          "w": 2867,
+          "h": 3840
+        },
+        {
+          "src": "images/work/interiores-contemporaneos/04.webp",
+          "thumb": "images/work/interiores-contemporaneos/04-t.webp",
           "w": 1792,
           "h": 2400
         },
         {
-          "src": "images/work/estudos/21.webp",
-          "thumb": "images/work/estudos/21-t.webp",
+          "src": "images/work/interiores-contemporaneos/05.webp",
+          "thumb": "images/work/interiores-contemporaneos/05-t.webp",
+          "w": 2867,
+          "h": 3840
+        },
+        {
+          "src": "images/work/interiores-contemporaneos/06.webp",
+          "thumb": "images/work/interiores-contemporaneos/06-t.webp",
+          "w": 2867,
+          "h": 3840
+        }
+      ],
+      "videos": []
+    },
+    {
+      "slug": "cinema-adega-lavabo",
+      "category": "residencial",
+      "title": {
+        "pt": "Cinema, Adega e Lavabo",
+        "en": "Cinema, Cellar & Powder Room"
+      },
+      "location": {
+        "pt": "",
+        "en": ""
+      },
+      "images": [
+        {
+          "src": "images/work/cinema-adega-lavabo/01.webp",
+          "thumb": "images/work/cinema-adega-lavabo/01-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/cinema-adega-lavabo/02.webp",
+          "thumb": "images/work/cinema-adega-lavabo/02-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/cinema-adega-lavabo/03.webp",
+          "thumb": "images/work/cinema-adega-lavabo/03-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/cinema-adega-lavabo/04.webp",
+          "thumb": "images/work/cinema-adega-lavabo/04-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/cinema-adega-lavabo/05.webp",
+          "thumb": "images/work/cinema-adega-lavabo/05-t.webp",
           "w": 1792,
           "h": 2400
         }

@@ -16,9 +16,9 @@ let projects = [];
 let lenis = null;
 
 /* Projetos em destaque (hero + vitrine horizontal), pela ordem */
-const HERO_SLUGS = ['casa-trancoso', 'holanda', 'casa-toscana', 'casa-na-mata', 'estudos'];  // usa a 1ª imagem horizontal
-const FEATURE = [['casa-trancoso', 0], ['biscayne-bay', 0], ['holanda', 0], ['casa-branca', 1], ['vista-mar', 0],
-                 ['casa-na-mata', 0], ['studios-porto-seguro', 2], ['piscina-salvador', 0]];             // [projeto, nº da imagem]
+const HERO_SLUGS = ['casa-rosiane', 'casa-trancoso', 'vista-da-mata', 'porto-princesa', 'casa-toscana'];  // usa a 1ª imagem horizontal
+const FEATURE = [['casa-rosiane', 0], ['summer-ville', 0], ['casa-trancoso', 0], ['porto-princesa', 4], ['residencial-caju', 1],
+                 ['vista-da-mata', 3], ['reserva-do-bosque', 3], ['biscayne-bay', 0], ['holanda', 0]];             // [projeto, nº da imagem]
 
 const PROCESS = [
   { name: ['Briefing & intake', 'Briefing & intake'], dur: ['1–3 dias', '1–3 days'],
@@ -98,7 +98,7 @@ const flag = (iso2) => String.fromCodePoint(...[...iso2].map(c => 0x1F1E6 + c.ch
 let country = COUNTRIES[0];
 
 const CAT = { residencial: ['Residência', 'Residence'], empreendimento: ['Empreendimento', 'Development'],
-              comercial: ['Comercial', 'Commercial'], estudo: ['Estudo', 'Study'] };
+              comercial: ['Comercial', 'Commercial'] };
 
 /* bilíngue: atributos + texto no idioma atual */
 const bi = (pt, en) => `data-pt="${esc(pt)}" data-en="${esc(en)}">${esc(lang === 'en' ? en : pt)}`;
@@ -196,7 +196,7 @@ function renderGrid() {
       </div>
       <div class="card-meta">
         <h3 class="card-title" ${bi(p.title.pt, p.title.en)}</h3>
-        <span class="card-loc"><span ${bi(p.location.pt, p.location.en)}</span> · <span ${bi(cat[0], cat[1])}</span></span>
+        <span class="card-loc">${p.location.pt ? `<span ${bi(p.location.pt, p.location.en)}</span> · ` : ''}<span ${bi(cat[0], cat[1])}</span></span>
       </div>
     </article>`;
   }).join('');
