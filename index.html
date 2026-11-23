@@ -4,396 +4,249 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CarmoViz Studio — Archviz Premium</title>
+  <meta name="description" content="CarmoViz Studio — visualização arquitetônica fotorrealista de alto padrão. Renders 3D, animação e tour virtual para arquitetos e incorporadoras.">
+  <meta name="theme-color" content="#050505">
+  <meta property="og:title" content="CarmoViz Studio — Archviz Premium">
+  <meta property="og:description" content="Renders fotorrealistas, animação arquitetônica e tour virtual 360°.">
+  <meta property="og:image" content="assets/showreel.webp">
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-  <meta name="description" content="CarmoViz Studio — Visualização arquitetônica fotorrealista de alto padrão. Renders 3D, animação e tour virtual.">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Montserrat:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
-
-  <!-- SVG Defs reutilizáveis do BrandBook -->
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <defs>
-      <g id="cv-symbol">
-        <g transform="translate(40,60) scale(0.02) translate(-1999.47,-2007.13)">
-          <polygon points="3545.94,1114.27 1999.47,221.42 453,1114.27 453,2899.99 1999.47,3792.84 3545.94,2899.99 3112.93,2649.99 1999.47,3292.84 886.01,2649.99 886.01,1364.27 1999.47,721.42 3112.93,1364.27"/>
-        </g>
-      </g>
-    </defs>
-  </svg>
 </head>
-<body>
+<body class="is-loading">
 
-<!-- ══════════════════════════════════════════════════════
-     TELA DE ENTRADA — Portal interativo
-══════════════════════════════════════════════════════ -->
-<div id="entry-screen">
-  <canvas id="entry-canvas" aria-hidden="true"></canvas>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="hex" viewBox="453 221 3093 3572">
+    <polygon points="3545.94,1114.27 1999.47,221.42 453,1114.27 453,2899.99 1999.47,3792.84 3545.94,2899.99 3112.93,2649.99 1999.47,3292.84 886.01,2649.99 886.01,1364.27 1999.47,721.42 3112.93,1364.27"/>
+  </symbol>
+</svg>
 
-  <div class="entry-content">
-    <div class="entry-brand" id="entry-brand">
-      <span class="entry-brand-name">CARMOVIZ</span>
-      <span class="entry-brand-sub">STUDIO</span>
-    </div>
-
-    <div class="entry-scroll" id="entry-scroll" aria-hidden="true">
-      <span class="entry-scroll-label">role para baixo</span>
-      <span class="entry-scroll-track"><span class="entry-scroll-dot"></span></span>
-    </div>
-  </div>
+<!-- INTRO -->
+<div class="loader" id="loader" aria-hidden="true">
+  <svg class="loader-hex" viewBox="453 221 3093 3572">
+    <polygon pathLength="1" points="3545.94,1114.27 1999.47,221.42 453,1114.27 453,2899.99 1999.47,3792.84 3545.94,2899.99 3112.93,2649.99 1999.47,3292.84 886.01,2649.99 886.01,1364.27 1999.47,721.42 3112.93,1364.27"/>
+  </svg>
+  <div class="loader-brand"><b>CARMOVIZ</b> STUDIO</div>
+  <div class="loader-count" id="loader-count">0</div>
+  <div class="loader-curtain"></div>
 </div>
 
-<!-- ══════════════════════════════════════════════════════
-     NAVEGAÇÃO
-══════════════════════════════════════════════════════ -->
-<nav id="nav">
+<div class="cursor" id="cursor" aria-hidden="true"><span class="cursor-dot"><span class="cursor-label" id="cursor-label"></span></span></div>
+
+<!-- NAVEGAÇÃO -->
+<header class="nav" id="nav">
   <a href="#hero" class="nav-logo" aria-label="CarmoViz Studio">
-    <svg viewBox="0 0 280 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Symbol -->
-      <g transform="translate(20,28) scale(0.011) translate(-1999.47,-2007.13)">
-        <polygon fill="currentColor" points="3545.94,1114.27 1999.47,221.42 453,1114.27 453,2899.99 1999.47,3792.84 3545.94,2899.99 3112.93,2649.99 1999.47,3292.84 886.01,2649.99 886.01,1364.27 1999.47,721.42 3112.93,1364.27"/>
-      </g>
-      <!-- Wordmark -->
-      <text x="46" y="34" font-family="Montserrat, sans-serif" font-size="16" letter-spacing="3" fill="currentColor" text-anchor="start">
-        <tspan font-weight="600">CARMOVIZ</tspan> <tspan font-weight="200" opacity="0.8">STUDIO</tspan>
-      </text>
-    </svg>
+    <svg class="nav-hex"><use href="#hex"/></svg>
+    <span><b>CARMOVIZ</b> STUDIO</span>
   </a>
-
+  <nav class="nav-links" aria-label="Seções">
+    <a href="#portfolio" data-pt="Projetos" data-en="Projects">Projetos</a>
+    <a href="#process" data-pt="Processo" data-en="Process">Processo</a>
+    <a href="#services" data-pt="Serviços" data-en="Services">Serviços</a>
+    <a href="#about" data-pt="Estúdio" data-en="Studio">Estúdio</a>
+  </nav>
   <div class="nav-right">
-    <ul class="nav-links">
-      <li><a href="#portfolio" id="nav-portfolio">Projetos</a></li>
-      <li><a href="#process"   id="nav-process">Processo</a></li>
-      <li><a href="#services"  id="nav-services">Serviços</a></li>
-      <li><a href="#about"     id="nav-about">Sobre</a></li>
-      <li><a href="#contact"   id="nav-contact">Contato</a></li>
-    </ul>
-    <div class="lang-toggle">
-      <span id="lang-pt" class="active">PT</span>
-      <span class="divider">|</span>
-      <span id="lang-en">EN</span>
+    <div class="lang" role="group" aria-label="Idioma">
+      <button type="button" class="lang-btn is-active" data-lang="pt">PT</button>
+      <button type="button" class="lang-btn" data-lang="en">EN</button>
     </div>
+    <a href="#contact" class="nav-cta"><span data-pt="Orçamento" data-en="Get a quote">Orçamento</span></a>
+    <button type="button" class="nav-burger" id="burger" aria-expanded="false" aria-controls="menu" data-aria-pt="Abrir menu" data-aria-en="Open menu" aria-label="Abrir menu"><span></span><span></span></button>
   </div>
+</header>
 
-  <button class="nav-hamburger" id="hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-
-<!-- Mobile Menu -->
-<div class="mobile-menu" id="mobile-menu">
-  <a href="#portfolio" id="mob-portfolio">Projetos</a>
-  <a href="#process"   id="mob-process">Processo</a>
-  <a href="#services"  id="mob-services">Serviços</a>
-  <a href="#about"     id="mob-about">Sobre</a>
-  <a href="#contact"   id="mob-contact">Contato</a>
-  <div class="lang-toggle" style="margin-top:20px;">
-    <span id="mob-lang-pt" class="active" style="cursor:pointer" onclick="document.getElementById('lang-pt').click()">PT</span>
-    <span class="divider">|</span>
-    <span id="mob-lang-en" style="cursor:pointer" onclick="document.getElementById('lang-en').click()">EN</span>
+<div class="menu" id="menu" aria-hidden="true">
+  <nav class="menu-links">
+    <a href="#portfolio"><span data-pt="Projetos" data-en="Projects">Projetos</span></a>
+    <a href="#process"><span data-pt="Processo" data-en="Process">Processo</span></a>
+    <a href="#services"><span data-pt="Serviços" data-en="Services">Serviços</span></a>
+    <a href="#about"><span data-pt="Estúdio" data-en="Studio">Estúdio</span></a>
+    <a href="#contact"><span data-pt="Contato" data-en="Contact">Contato</span></a>
+  </nav>
+  <div class="menu-foot">
+    <div class="lang" role="group" aria-label="Idioma">
+      <button type="button" class="lang-btn is-active" data-lang="pt">PT</button>
+      <button type="button" class="lang-btn" data-lang="en">EN</button>
+    </div>
+    <div class="menu-social">
+      <a href="https://instagram.com/carmoviz" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://wa.me/5573999210436" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="https://www.linkedin.com/in/carmovinicius/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════════════════
-     HERO
-══════════════════════════════════════════════════════ -->
-<section id="hero">
-  <div class="hero-bg">
-    <canvas id="hero-archviz" aria-hidden="true"></canvas>
-    <div class="hero-overlay"></div>
-    <div class="hero-pattern"></div>
-  </div>
+<main>
 
-  <div class="hero-content">
-    <h1 class="hero-tagline t-display hero-enter" id="hero-tagline">
-      Visualização do amanhã,<br>entregue hoje.
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-media" id="hero-media"></div>
+  <div class="hero-shade"></div>
+  <div class="hero-inner">
+    <p class="eyebrow hero-eyebrow"><span data-pt="Archviz Premium · Porto Seguro — Bahia" data-en="Premium Archviz · Porto Seguro — Brazil">Archviz Premium · Porto Seguro — Bahia</span></p>
+    <h1 class="hero-title">
+      <span class="ln"><span data-pt="Visualização" data-en="Tomorrow's">Visualização</span></span>
+      <span class="ln"><span data-pt="do amanhã," data-en="visualization,">do amanhã,</span></span>
+      <span class="ln gold"><span data-pt="entregue hoje." data-en="delivered today.">entregue hoje.</span></span>
     </h1>
-
-    <p class="t-caption hero-enter" id="hero-sub">Archviz Premium · Renders Fotorrealistas · Brasil & Internacional</p>
-
-    <div class="hero-ctas hero-enter">
-      <a href="#portfolio" class="btn-gold" id="hero-cta1">Ver Projetos</a>
-      <a href="#contact"   class="btn-ghost" id="hero-cta2">Fale Conosco</a>
+    <div class="hero-ctas">
+      <a href="#portfolio" class="btn btn-gold"><span data-pt="Ver projetos" data-en="View projects">Ver projetos</span></a>
+      <a href="#contact" class="btn btn-ghost"><span data-pt="Fale conosco" data-en="Get in touch">Fale conosco</span></a>
     </div>
   </div>
-
-  <div class="hero-coords hero-enter" aria-hidden="true">
-    <span>16°26'S</span>
-    <span class="hero-coords-sep">·</span>
-    <span>39°04'O</span>
-    <span class="hero-coords-sep">·</span>
-    <span>Porto Seguro — BA</span>
+  <div class="hero-meta">
+    <div class="hero-now">
+      <span class="hero-now-label" data-pt="Em destaque" data-en="Featured">Em destaque</span>
+      <span class="hero-now-title" id="hero-now-title"></span>
+      <span class="hero-now-loc" id="hero-now-loc"></span>
+    </div>
+    <div class="hero-bars" id="hero-bars"></div>
   </div>
+  <div class="hero-scroll" aria-hidden="true"><span>scroll</span><i></i></div>
+</section>
 
-  <div class="hero-scroll hero-enter">
-    <div class="hero-scroll-line"></div>
-    <span class="t-caption" style="font-size:0.55rem;">scroll</span>
+<!-- FAIXA -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="marquee">
+    <span>Renders 4K</span><svg><use href="#hex"/></svg>
+    <span data-pt="Animação" data-en="Animation">Animação</span><svg><use href="#hex"/></svg>
+    <span>Tour 360°</span><svg><use href="#hex"/></svg>
+    <span data-pt="Modelagem 3D" data-en="3D Modeling">Modelagem 3D</span><svg><use href="#hex"/></svg>
+    <span>Landing Pages</span><svg><use href="#hex"/></svg>
+  </div>
+</div>
+
+<!-- ESTÚDIO -->
+<section class="studio" id="about">
+  <p class="eyebrow"><span data-pt="O estúdio" data-en="The studio">O estúdio</span></p>
+  <p class="studio-lead reveal-words" data-pt="Transformamos projetos em imagens que vendem antes mesmo da primeira pedra. Precisão técnica, luz cinematográfica e o olhar de quem entende de arquitetura." data-en="We turn projects into images that sell before the first stone is laid. Technical precision, cinematic light and the eye of people who understand architecture.">Transformamos projetos em imagens que vendem antes mesmo da primeira pedra. Precisão técnica, luz cinematográfica e o olhar de quem entende de arquitetura.</p>
+  <div class="stats">
+    <div class="stat"><b class="stat-num" data-count="112">0</b><span data-pt="projetos entregues" data-en="projects delivered">projetos entregues</span></div>
+    <div class="stat"><b class="stat-num" data-count="6">0</b><span data-pt="países atendidos" data-en="countries served">países atendidos</span></div>
+    <div class="stat"><b class="stat-num">4K</b><span data-pt="resolução padrão" data-en="standard resolution">resolução padrão</span></div>
+    <div class="stat"><b class="stat-num">24h</b><span data-pt="para responder" data-en="to reply">para responder</span></div>
   </div>
 </section>
 
-
-
-<!-- ══════════════════════════════════════════════════════
-     PORTFÓLIO
-══════════════════════════════════════════════════════ -->
-<section id="portfolio">
-  <div class="section-header reveal">
-    <span class="t-caption">02</span>
-    <h2 class="section-title" id="section-portfolio-title">Projetos</h2>
-    <div class="section-line"></div>
-  </div>
-
-  <div class="portfolio-filters reveal">
-    <button class="filter-btn active" data-filter="all"       id="filter-all">Todos</button>
-    <button class="filter-btn"        data-filter="exterior"  id="filter-ext">Exterior</button>
-    <button class="filter-btn"        data-filter="interior"  id="filter-int">Interior</button>
-    <button class="filter-btn"        data-filter="animation" id="filter-anim">Animação</button>
-  </div>
-
-  <div class="portfolio-grid" id="portfolio-wrap">
-    <!-- Renderizado via JS -->
-  </div>
-
-  <div class="portfolio-more reveal" id="portfolio-more-wrap" style="display:none">
-    <button class="btn-ver-mais" id="btn-ver-mais">
-      <span>Ver mais projetos</span>
-      <svg viewBox="0 0 34 8" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <line x1="0" y1="4" x2="30" y2="4"/>
-        <polyline points="25,1 30,4 25,7" stroke-linejoin="round"/>
-      </svg>
-    </button>
+<!-- SHOWREEL -->
+<section class="reel" id="reel">
+  <div class="reel-frame" id="reel-frame">
+    <video src="assets/showreel.mp4" poster="assets/showreel.webp" muted loop playsinline preload="metadata"></video>
+    <div class="reel-caption"><span>Showreel</span><span>2026</span></div>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════
-     PROCESSO
-══════════════════════════════════════════════════════ -->
-<section id="process">
-  <div class="process-pin">
-    <div class="section-header">
-      <span class="t-caption">03</span>
-      <h2 class="section-title" id="section-process-title">Processo</h2>
-      <div class="section-line"></div>
-      <p class="t-gray" style="font-size:0.85rem;max-width:560px;" id="section-process-sub">
-        Da concepção à entrega — cada fase executada com precisão.
-      </p>
-    </div>
+<!-- PORTFÓLIO -->
+<section class="work" id="portfolio">
+  <div class="work-head">
+    <p class="eyebrow"><span data-pt="Projetos selecionados" data-en="Selected work">Projetos selecionados</span></p>
+    <h2 class="section-title"><span class="ln"><span data-pt="Arquitetura" data-en="Architecture">Arquitetura</span></span> <span class="ln gold"><span data-pt="em imagem." data-en="in images.">em imagem.</span></span></h2>
+  </div>
 
-    <div class="process-scroller" id="process-scroller">
-      <div class="process-track" id="process-track">
-        <!-- Renderizado via JS -->
-      </div>
-    </div>
+  <div class="feature" id="feature">
+    <div class="feature-track" id="feature-track"></div>
+  </div>
 
-    <div class="process-progress">
-      <span class="process-progress-track"><span class="process-progress-bar" id="process-progress-bar"></span></span>
-      <span class="process-hint" id="process-hint">continue rolando</span>
+  <div class="work-all">
+    <div class="filters" id="filters">
+      <button type="button" class="filter is-active" data-filter="all"><span data-pt="Todos" data-en="All">Todos</span></button>
+      <button type="button" class="filter" data-filter="residencial"><span data-pt="Residências" data-en="Residences">Residências</span></button>
+      <button type="button" class="filter" data-filter="empreendimento"><span data-pt="Empreendimentos" data-en="Developments">Empreendimentos</span></button>
+      <button type="button" class="filter" data-filter="comercial"><span data-pt="Comercial" data-en="Commercial">Comercial</span></button>
+      <button type="button" class="filter" data-filter="estudo"><span data-pt="Estudos" data-en="Studies">Estudos</span></button>
     </div>
+    <div class="grid" id="grid"></div>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════
-     SERVIÇOS
-══════════════════════════════════════════════════════ -->
-<section id="services">
-  <div class="section-header reveal">
-    <span class="t-caption">04</span>
-    <h2 class="section-title" id="section-services-title">Serviços</h2>
-    <div class="section-line"></div>
-    <p class="t-gray" style="font-size:0.85rem;max-width:560px;" id="section-services-sub">
-      Soluções visuais que elevam o valor percebido do seu projeto.
-    </p>
+<!-- PROCESSO -->
+<section class="process" id="process">
+  <div class="process-head">
+    <p class="eyebrow"><span data-pt="Processo" data-en="Process">Processo</span></p>
+    <h2 class="section-title"><span class="ln"><span data-pt="Do arquivo" data-en="From file">Do arquivo</span></span> <span class="ln gold"><span data-pt="à obra de arte." data-en="to artwork.">à obra de arte.</span></span></h2>
   </div>
-
-  <div class="services-grid" id="services-grid">
-    <!-- Renderizado via JS -->
-  </div>
+  <ol class="steps" id="steps"></ol>
 </section>
 
-<!-- ══════════════════════════════════════════════════════
-     SOBRE
-══════════════════════════════════════════════════════ -->
-<section id="about">
-  <div class="about-container">
-    <div class="about-main-row reveal">
-      <div class="about-left-col">
-        <span class="about-section-num">05</span>
-        <h2 class="about-section-title" id="section-about-title">Sobre</h2>
-        <span class="about-section-subtitle" id="section-about-sub">Estúdio de Visualização Arquitetônica</span>
-        
-        <h3 class="about-lead-title" id="about-lead">
-          Transformamos projetos em imagens que vendem antes mesmo da construção.
-        </h3>
-        
-        <div class="about-body" id="about-body"></div>
-        
-        <div class="about-cta-row">
-          <div class="about-cta-wrap">
-            <a href="#process" class="btn-ghost about-cta" id="about-cta-btn">
-              <span>Conheça nosso processo</span>
-              <svg class="cta-arrow" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 14px; height: 8px; margin-left: 8px;">
-                <line x1="0" y1="5" x2="16" y2="5" stroke="currentColor" stroke-width="1.2"/>
-                <polyline points="12,1 16,5 12,9" fill="none" stroke="currentColor" stroke-width="1.2"/>
-              </svg>
-            </a>
-          </div>
-          
-          <div class="about-social">
-            <a href="https://www.facebook.com/carmovizstudio" target="_blank" rel="noopener" aria-label="Facebook">
-              <svg viewBox="0 0 24 24" fill="currentColor" stroke="none">
-                <path d="M13.5 10h2.5l-.4 3H13.5V21H10.5V13H8.5V10h2V8.7C10.5 6.57 11.8 5 14 5H16.5V8H14.8c-.72 0-1.3.13-1.3.85V10z"/>
-              </svg>
-            </a>
-            <a href="https://wa.me/5573999210436" target="_blank" rel="noopener" aria-label="WhatsApp">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
-              </svg>
-            </a>
-            <a href="https://br.pinterest.com/carmoviz/" target="_blank" rel="noopener" aria-label="Pinterest">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12.24 2a10 10 0 0 0-3.56 19.37c-.08-.72-.15-1.84.03-2.63.17-.72 1.09-4.63 1.09-4.63s-.28-.56-.28-1.39c0-1.3.76-2.28 1.7-2.28.8 0 1.19.6 1.19 1.33 0 .8-.52 2.01-.78 3.13-.22.95.47 1.72 1.41 1.72 1.69 0 2.99-1.79 2.99-4.37 0-2.28-1.64-3.88-3.99-3.88-2.72 0-4.32 2.04-4.32 4.15 0 .82.32 1.7.72 2.19a.23.23 0 0 1 .05.21c-.08.32-.26 1.05-.3 1.2-.05.2-.18.25-.42.14a5.2 5.2 0 0 1-2.92-4.59c0-3.74 2.72-7.17 7.84-7.17 4.12 0 7.32 2.93 7.32 6.85 0 4.1-2.58 7.4-6.16 7.4-1.2 0-2.34-.63-2.73-1.37l-.75 2.85c-.27 1.04-1 2.35-1.49 3.16A10 10 0 1 0 12.24 2z"/>
-              </svg>
-            </a>
-            <a href="https://www.linkedin.com/in/carmovinicius/" target="_blank" rel="noopener" aria-label="LinkedIn">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                <rect x="2" y="9" width="4" height="12"/>
-                <circle cx="4" cy="4" r="2"/>
-              </svg>
-            </a>
-            <a href="https://instagram.com/carmoviz" target="_blank" rel="noopener" aria-label="Instagram">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                <circle cx="12" cy="12" r="4"/>
-                <line x1="16.5" y1="7.5" x2="16.5" y2="7.5"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="about-right-col">
-        <div class="about-graphic-wrap">
-          <img src="images/about-graphic.png" class="about-graphic-img" alt="CarmoViz Architectural Concept">
-          <div class="about-graphic-glow"></div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="about-stats-grid reveal" id="about-stats"></div>
+<!-- SERVIÇOS -->
+<section class="services" id="services">
+  <div class="services-head">
+    <p class="eyebrow"><span data-pt="Serviços" data-en="Services">Serviços</span></p>
+    <h2 class="section-title"><span class="ln"><span data-pt="O que" data-en="What we">O que</span></span> <span class="ln gold"><span data-pt="entregamos." data-en="deliver.">entregamos.</span></span></h2>
   </div>
+  <div class="svc-list" id="svc-list"></div>
+  <div class="svc-preview" id="svc-preview" aria-hidden="true"></div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════
-     CONTATO
-══════════════════════════════════════════════════════ -->
-<section id="contact">
-  <canvas id="contact-graphic" aria-hidden="true"></canvas>
+<!-- CONTATO -->
+<section class="contact" id="contact">
+  <svg class="contact-hex" aria-hidden="true"><use href="#hex"/></svg>
+  <div class="contact-inner">
+    <p class="eyebrow"><span data-pt="Contato · resposta em até 24h" data-en="Contact · reply within 24h">Contato · resposta em até 24h</span></p>
+    <h2 class="contact-title"><span class="ln"><span data-pt="Vamos dar vida" data-en="Let's bring your">Vamos dar vida</span></span> <span class="ln gold"><span data-pt="à sua visão?" data-en="vision to life?">à sua visão?</span></span></h2>
 
-  <div class="contact-inner reveal">
-    <h2 class="contact-headline" id="contact-headline">Vamos dar vida à sua visão?</h2>
-    <p class="contact-lead" id="contact-lead"></p>
-
-    <form class="contact-form2" onsubmit="return false;">
+    <form class="cform" id="cform" novalidate>
       <div class="cf-row">
-        <div class="cf-field">
-          <label class="cf-label" for="form-name"><span id="form-label-name">Nome da Empresa</span></label>
-          <input class="cf-input" id="form-name" type="text" autocomplete="organization">
-        </div>
-        <div class="cf-field">
-          <label class="cf-label" for="form-email"><span id="form-label-email">E-mail</span></label>
-          <input class="cf-input" id="form-email" type="email" autocomplete="email">
-        </div>
+        <label class="cf-field"><span class="cf-label" data-pt="Nome da empresa" data-en="Company name">Nome da empresa</span>
+          <input class="cf-input" id="form-name" type="text" autocomplete="organization" required></label>
+        <label class="cf-field"><span class="cf-label">E-mail</span>
+          <input class="cf-input" id="form-email" type="email" autocomplete="email" required></label>
       </div>
       <div class="cf-row">
-        <div class="cf-field">
-          <label class="cf-label" for="form-phone"><span id="form-label-phone">Telefone</span></label>
-          <div class="cf-phone-row" id="country-select">
-            <button type="button" class="cf-country-trigger" id="country-trigger" aria-haspopup="listbox" aria-expanded="false" aria-label="País">
-              <span class="cf-country-flag" id="country-flag">🇧🇷</span>
-              <span class="cf-country-code" id="country-code">+55</span>
-              <svg class="cs-arrow" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <polyline points="1,1 5.5,6 10,1" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
-              </svg>
+        <div class="cf-field"><label class="cf-label" for="form-phone" data-pt="Telefone" data-en="Phone">Telefone</label>
+          <div class="cf-phone" id="country-select">
+            <button type="button" class="cf-country" id="country-trigger" aria-haspopup="listbox" aria-expanded="false" data-aria-pt="País" data-aria-en="Country" aria-label="País">
+              <span id="country-flag">🇧🇷</span><span id="country-code">+55</span>
+              <svg viewBox="0 0 11 7" fill="none"><polyline points="1,1 5.5,6 10,1" stroke="currentColor" stroke-width="1.2"/></svg>
             </button>
-            <input class="cf-input cf-phone-input" id="form-phone" type="tel" inputmode="tel" autocomplete="tel">
-            <div class="cf-country-dropdown" id="country-dropdown" role="listbox">
-              <input type="text" class="cf-country-search" id="country-search" autocomplete="off">
-              <div class="cf-country-list" id="country-list"></div>
+            <input class="cf-input" id="form-phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(00) 00000-0000" required>
+            <div class="cf-drop" id="country-dropdown" role="listbox">
+              <input type="text" class="cf-search" id="country-search" autocomplete="off" data-ph-pt="Buscar país…" data-ph-en="Search country…" placeholder="Buscar país…">
+              <div class="cf-list" id="country-list"></div>
             </div>
           </div>
         </div>
-        <div class="cf-field">
-          <label class="cf-label" for="form-service"><span id="form-label-service">Tipo de serviço</span></label>
-          <select class="cf-input cf-select" id="form-service">
-            <option value="" id="form-service-ph">Selecione um serviço</option>
-          </select>
-        </div>
+        <label class="cf-field"><span class="cf-label" data-pt="Tipo de serviço" data-en="Service type">Tipo de serviço</span>
+          <select class="cf-input cf-select" id="form-service"></select></label>
       </div>
       <div class="cf-row">
-        <div class="cf-field">
-          <label class="cf-label" for="form-type"><span id="form-label-type">Tipo de projeto</span> <span class="cf-hint" id="form-hint-type">(Residencial, Comercial, etc.)</span></label>
-          <input class="cf-input" id="form-type" type="text">
-        </div>
-        <div class="cf-field">
-          <label class="cf-label" for="form-msg"><span id="form-label-msg">Mensagem / detalhes</span> <span class="cf-hint" id="form-hint-msg">(Opcional)</span></label>
-          <textarea class="cf-textarea" id="form-msg"></textarea>
-        </div>
+        <label class="cf-field"><span class="cf-label" data-pt="Tipo de projeto" data-en="Project type">Tipo de projeto</span>
+          <input class="cf-input" id="form-type" type="text" data-ph-pt="ex.: residencial, comercial" data-ph-en="e.g. residential, commercial" placeholder="ex.: residencial, comercial"></label>
+        <label class="cf-field"><span class="cf-label" data-pt="Mensagem (opcional)" data-en="Message (optional)">Mensagem (opcional)</span>
+          <textarea class="cf-input cf-textarea" id="form-msg" rows="3" data-ph-pt="Conte sobre o seu projeto…" data-ph-en="Tell us about your project…" placeholder="Conte sobre o seu projeto…"></textarea></label>
       </div>
-      <button class="cf-submit" id="form-submit" type="submit">Enviar solicitação</button>
-      <p class="cf-note" id="form-note">Suas informações estão seguras e serão usadas apenas para este fim.</p>
+      <button class="btn btn-gold cf-submit" id="form-submit" type="submit"><span data-pt="Enviar solicitação" data-en="Send request">Enviar solicitação</span></button>
+      <p class="cf-note" data-pt="Suas informações estão seguras e serão usadas apenas para este fim." data-en="Your information is safe and will be used only for this purpose.">Suas informações estão seguras e serão usadas apenas para este fim.</p>
     </form>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════
-     RODAPÉ
-══════════════════════════════════════════════════════ -->
-<!-- ══════════════════════════════════════════════════════
-     VOLTAR AO TOPO
-══════════════════════════════════════════════════════ -->
-<div class="back-to-top-wrap">
-  <a href="#hero" class="back-to-top" id="back-to-top-btn" aria-label="Voltar ao início">
-    <svg class="btt-arrow" viewBox="0 0 20 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <line x1="10" y1="34" x2="10" y2="4" stroke="currentColor" stroke-width="0.8"/>
-      <polyline points="3,11 10,4 17,11" fill="none" stroke="currentColor" stroke-width="0.8" stroke-linejoin="round"/>
-    </svg>
-    <span class="btt-label" id="btt-label">INÍCIO</span>
-  </a>
-</div>
+</main>
 
-<footer>
-  <div class="footer-logo">
-    <svg viewBox="0 0 280 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <g transform="translate(20,28) scale(0.011) translate(-1999.47,-2007.13)">
-        <polygon fill="currentColor" points="3545.94,1114.27 1999.47,221.42 453,1114.27 453,2899.99 1999.47,3792.84 3545.94,2899.99 3112.93,2649.99 1999.47,3292.84 886.01,2649.99 886.01,1364.27 1999.47,721.42 3112.93,1364.27"/>
-      </g>
-      <text x="46" y="34" font-family="Montserrat, sans-serif" font-size="16" letter-spacing="3" fill="currentColor" text-anchor="start">
-        <tspan font-weight="600">CARMOVIZ</tspan> <tspan font-weight="200" opacity="0.8">STUDIO</tspan>
-      </text>
-    </svg>
+<footer class="footer">
+  <div class="footer-top">
+    <a href="#hero" class="nav-logo" aria-label="CarmoViz Studio"><svg class="nav-hex"><use href="#hex"/></svg><span><b>CARMOVIZ</b> STUDIO</span></a>
+    <a href="#hero" class="footer-top-btn"><span data-pt="Voltar ao topo" data-en="Back to top">Voltar ao topo</span> ↑</a>
   </div>
-
   <div class="footer-legal-title">LEGAL</div>
   <div class="footer-links-row">
-    <a href="centro-juridico.html" id="footer-link-trust">Centro Jurídico e de Confiança</a>
-    <a href="termos.html" id="footer-link-terms">Termos de Uso</a>
-    <a href="privacidade.html" id="footer-link-privacy">Política de Privacidade</a>
-    <a href="cookies.html" id="footer-link-cookies">Política de Cookies</a>
-    <a href="propriedade-intelectual.html" id="footer-link-ip">Propriedade Intelectual</a>
-    <a href="confidencialidade.html" id="footer-link-conf">Confidencialidade do Cliente</a>
-    <a href="acessibilidade.html" id="footer-link-access">Acessibilidade</a>
-    <a href="seguranca.html" id="footer-link-security">Segurança</a>
-    <a href="#contact" id="footer-link-contact">Contato</a>
+    <a href="centro-juridico.html" data-pt="Centro Jurídico e de Confiança" data-en="Trust & Legal Center">Centro Jurídico e de Confiança</a>
+    <a href="termos.html" data-pt="Termos de Uso" data-en="Terms of Use">Termos de Uso</a>
+    <a href="privacidade.html" data-pt="Política de Privacidade" data-en="Privacy Policy">Política de Privacidade</a>
+    <a href="cookies.html" data-pt="Política de Cookies" data-en="Cookie Policy">Política de Cookies</a>
+    <a href="propriedade-intelectual.html" data-pt="Propriedade Intelectual" data-en="Intellectual Property">Propriedade Intelectual</a>
+    <a href="confidencialidade.html" data-pt="Confidencialidade do Cliente" data-en="Client Confidentiality">Confidencialidade do Cliente</a>
+    <a href="acessibilidade.html" data-pt="Acessibilidade" data-en="Accessibility">Acessibilidade</a>
+    <a href="seguranca.html" data-pt="Segurança" data-en="Security">Segurança</a>
+    <a href="#contact" data-pt="Contato" data-en="Contact">Contato</a>
   </div>
   <div class="footer-divider"></div>
-  <p class="footer-copy" id="footer-copy">© 2026 CarmoViz Studio. Todos os direitos reservados.</p>
+  <p class="footer-copy" data-pt="© 2026 CarmoViz Studio. Todos os direitos reservados." data-en="© 2026 CarmoViz Studio. All rights reserved.">© 2026 CarmoViz Studio. Todos os direitos reservados.</p>
   <div class="footer-bottom-row">
-    <div class="footer-info" id="footer-info">
-      Carmoviz Studio LTDA · CNPJ: 67.898.739/0001-33 · 2026
-    </div>
-    <div class="footer-socials" id="footer-socials">
+    <div class="footer-info">Carmoviz Studio LTDA · CNPJ: 67.898.739/0001-33 · 2026</div>
+    <div class="footer-socials">
       <a href="https://instagram.com/carmoviz" target="_blank" rel="noopener noreferrer">Instagram</a>
       <span class="footer-link-sep">·</span>
       <a href="https://www.linkedin.com/in/carmovinicius/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
@@ -401,27 +254,22 @@
   </div>
 </footer>
 
-<!-- ══════════════════════════════════════════════════════
-     MODAL / LIGHTBOX
-══════════════════════════════════════════════════════ -->
-<div id="modal" role="dialog" aria-modal="true" aria-label="Galeria do projeto">
-  <div class="modal-nav">
-    <div class="modal-project-info">
-      <div class="modal-title" id="modal-title"></div>
-      <div class="modal-loc" id="modal-loc"></div>
-    </div>
-    <button class="modal-close" onclick="closeModal()" aria-label="Fechar">✕</button>
+<!-- GALERIA DO PROJETO -->
+<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="viewer-title">
+  <div class="viewer-top">
+    <div><h3 class="viewer-title" id="viewer-title"></h3><p class="viewer-loc" id="viewer-loc"></p></div>
+    <div class="viewer-count" id="viewer-count"></div>
+    <button type="button" class="viewer-close" id="viewer-close" data-aria-pt="Fechar" data-aria-en="Close" aria-label="Fechar">✕</button>
   </div>
-
-  <div class="modal-body">
-    <button class="modal-arrow modal-prev" onclick="modalPrev()" aria-label="Anterior">&#8592;</button>
-    <div class="modal-img-wrap" id="modal-media"></div>
-    <button class="modal-arrow modal-next" onclick="modalNext()" aria-label="Próximo">&#8594;</button>
-  </div>
-
-  <div class="modal-footer" id="modal-dots"></div>
+  <div class="viewer-stage" id="viewer-stage"></div>
+  <button type="button" class="viewer-arrow prev" id="viewer-prev" data-aria-pt="Anterior" data-aria-en="Previous" aria-label="Anterior">←</button>
+  <button type="button" class="viewer-arrow next" id="viewer-next" data-aria-pt="Próxima" data-aria-en="Next" aria-label="Próxima">→</button>
+  <div class="viewer-thumbs" id="viewer-thumbs"></div>
 </div>
 
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
 <script src="assets/main.js"></script>
 </body>
 </html>

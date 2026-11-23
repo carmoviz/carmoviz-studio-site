@@ -1,46 +1,836 @@
 {
-    "projects": [
-        { "id": "p01", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "exterior", "year": "2025", "cover": "images/portfolio/Portifólio (1).jpeg",  "images": ["images/portfolio/Portifólio (1).jpeg"],  "videos": [] },
-        { "id": "p02", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "interior", "year": "2025", "cover": "images/portfolio/Portifólio (2).jpeg",  "images": ["images/portfolio/Portifólio (2).jpeg"],  "videos": [] },
-        { "id": "p03", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "interior", "year": "2025", "cover": "images/portfolio/Portifólio (3).jpeg",  "images": ["images/portfolio/Portifólio (3).jpeg"],  "videos": [] },
-        { "id": "p04", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "interior", "year": "2025", "cover": "images/portfolio/Portifólio (4).jpeg",  "images": ["images/portfolio/Portifólio (4).jpeg"],  "videos": [] },
-        { "id": "p05", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "interior", "year": "2025", "cover": "images/portfolio/Portifólio (5).jpeg",  "images": ["images/portfolio/Portifólio (5).jpeg"],  "videos": [] },
-        { "id": "p06", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "exterior", "year": "2025", "cover": "images/portfolio/Portifólio (6).jpeg",  "images": ["images/portfolio/Portifólio (6).jpeg"],  "videos": [] },
-        { "id": "p07", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "interior", "year": "2025", "cover": "images/portfolio/Portifólio (7).jpeg",  "images": ["images/portfolio/Portifólio (7).jpeg"],  "videos": [] },
-        { "id": "p08", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "exterior", "year": "2025", "cover": "images/portfolio/Portifólio (8).jpeg",  "images": ["images/portfolio/Portifólio (8).jpeg"],  "videos": [] },
-        { "id": "p09", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "exterior", "year": "2025", "cover": "images/portfolio/Portifólio (9).jpeg",  "images": ["images/portfolio/Portifólio (9).jpeg"],  "videos": [] },
-        { "id": "p10", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "interior", "year": "2025", "cover": "images/portfolio/Portifólio (10).jpeg", "images": ["images/portfolio/Portifólio (10).jpeg"], "videos": [] },
-        { "id": "p11", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "exterior", "year": "2025", "cover": "images/portfolio/Portifólio (11).jpeg", "images": ["images/portfolio/Portifólio (11).jpeg"], "videos": [] },
-        { "id": "p12", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "exterior", "year": "2025", "cover": "images/portfolio/Portifólio (12).jpeg", "images": ["images/portfolio/Portifólio (12).jpeg"], "videos": [] },
-        { "id": "p13", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "exterior", "year": "2025", "cover": "images/portfolio/Portifólio (13).jpeg", "images": ["images/portfolio/Portifólio (13).jpeg"], "videos": [] },
-        { "id": "p14", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "exterior", "year": "2025", "cover": "images/portfolio/Portifólio (14).jpeg", "images": ["images/portfolio/Portifólio (14).jpeg"], "videos": [] },
-        { "id": "p15", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "exterior", "year": "2025", "cover": "images/portfolio/Portifólio (15).jpeg", "images": ["images/portfolio/Portifólio (15).jpeg"], "videos": [] },
-        { "id": "p16", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "exterior", "year": "2025", "cover": "images/portfolio/Portifólio (16).jpeg", "images": ["images/portfolio/Portifólio (16).jpeg"], "videos": [] },
-        { "id": "p17", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "interior", "year": "2025", "cover": "images/portfolio/Portifólio (17).jpeg", "images": ["images/portfolio/Portifólio (17).jpeg"], "videos": [] },
-        { "id": "p18", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "exterior", "year": "2025", "cover": "images/portfolio/Portifólio (18).jpeg", "images": ["images/portfolio/Portifólio (18).jpeg"], "videos": [] },
-        { "id": "p19", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "exterior", "year": "2025", "cover": "images/portfolio/Portifólio (19).jpeg", "images": ["images/portfolio/Portifólio (19).jpeg"], "videos": [] },
-        { "id": "p20", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "exterior", "year": "2025", "cover": "images/portfolio/Portifólio (20).jpeg", "images": ["images/portfolio/Portifólio (20).jpeg"], "videos": [] },
-        { "id": "p21", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "exterior", "year": "2025", "cover": "images/portfolio/Portifólio (21).jpeg", "images": ["images/portfolio/Portifólio (21).jpeg"], "videos": [] },
-        { "id": "p22", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "exterior", "year": "2025", "cover": "images/portfolio/Portifólio (22).jpeg", "images": ["images/portfolio/Portifólio (22).jpeg"], "videos": [] },
-        { "id": "p23", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "exterior", "year": "2025", "cover": "images/portfolio/Portifólio (23).jpeg", "images": ["images/portfolio/Portifólio (23).jpeg"], "videos": [] },
-        { "id": "p24", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "exterior", "year": "2025", "cover": "images/portfolio/Portifólio (24).jpeg", "images": ["images/portfolio/Portifólio (24).jpeg"], "videos": [] },
-        { "id": "p25", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "exterior", "year": "2025", "cover": "images/portfolio/Portifólio (25).jpeg", "images": ["images/portfolio/Portifólio (25).jpeg"], "videos": [] },
-        { "id": "p26", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "exterior", "year": "2025", "cover": "images/portfolio/Portifólio (26).jpeg", "images": ["images/portfolio/Portifólio (26).jpeg"], "videos": [] },
-        { "id": "p27", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "exterior", "year": "2025", "cover": "images/portfolio/Portifólio (27).jpeg", "images": ["images/portfolio/Portifólio (27).jpeg"], "videos": [] },
-        { "id": "p28", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "exterior", "year": "2025", "cover": "images/portfolio/Portifólio (28).jpeg", "images": ["images/portfolio/Portifólio (28).jpeg"], "videos": [] },
-        { "id": "p29", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "exterior", "year": "2025", "cover": "images/portfolio/Portifólio (29).jpeg", "images": ["images/portfolio/Portifólio (29).jpeg"], "videos": [] },
-        { "id": "p30", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "exterior", "year": "2025", "cover": "images/portfolio/Portifólio (30).jpeg", "images": ["images/portfolio/Portifólio (30).jpeg"], "videos": [] },
-        { "id": "p31", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "exterior", "year": "2025", "cover": "images/portfolio/Portifólio (31).jpeg", "images": ["images/portfolio/Portifólio (31).jpeg"], "videos": [] },
-        { "id": "p32", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "exterior", "year": "2025", "cover": "images/portfolio/Portifólio (32).jpeg", "images": ["images/portfolio/Portifólio (32).jpeg"], "videos": [] },
-        { "id": "p33", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "interior", "year": "2025", "cover": "images/portfolio/Portifólio (33).jpeg", "images": ["images/portfolio/Portifólio (33).jpeg"], "videos": [] },
-        { "id": "p34", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "interior", "year": "2025", "cover": "images/portfolio/Portifólio (34).jpeg", "images": ["images/portfolio/Portifólio (34).jpeg"], "videos": [] },
-        { "id": "p35", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "interior", "year": "2025", "cover": "images/portfolio/Portifólio (35).jpeg", "images": ["images/portfolio/Portifólio (35).jpeg"], "videos": [] },
-        { "id": "p36", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "exterior", "year": "2025", "cover": "images/portfolio/Portifólio (36).jpeg", "images": ["images/portfolio/Portifólio (36).jpeg"], "videos": [] },
-        { "id": "p37", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "interior", "year": "2025", "cover": "images/portfolio/Portifólio (37).jpeg", "images": ["images/portfolio/Portifólio (37).jpeg"], "videos": [] },
-        { "id": "p38", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "interior", "year": "2025", "cover": "images/portfolio/Portifólio (38).jpeg", "images": ["images/portfolio/Portifólio (38).jpeg"], "videos": [] },
-        { "id": "p39", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "interior", "year": "2025", "cover": "images/portfolio/Portifólio (39).jpeg", "images": ["images/portfolio/Portifólio (39).jpeg"], "videos": [] },
-        { "id": "p40", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "interior", "year": "2025", "cover": "images/portfolio/Portifólio (40).jpeg", "images": ["images/portfolio/Portifólio (40).jpeg"], "videos": [] },
-        { "id": "p41", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "exterior", "year": "2025", "cover": "images/portfolio/Portifólio (41).jpeg", "images": ["images/portfolio/Portifólio (41).jpeg"], "videos": [] },
-        { "id": "p42", "title_pt": "", "title_en": "", "location_pt": "", "location_en": "", "category": "exterior", "year": "2025", "cover": "images/portfolio/Portifólio (42).jpeg", "images": ["images/portfolio/Portifólio (42).jpeg"], "videos": [] }
-    ]
+  "projects": [
+    {
+      "slug": "casa-trancoso",
+      "category": "residencial",
+      "title": {
+        "pt": "Casa em Trancoso",
+        "en": "Trancoso House"
+      },
+      "location": {
+        "pt": "Trancoso, Bahia",
+        "en": "Trancoso, Brazil"
+      },
+      "images": [
+        {
+          "src": "images/work/casa-trancoso/01.webp",
+          "thumb": "images/work/casa-trancoso/01-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/casa-trancoso/02.webp",
+          "thumb": "images/work/casa-trancoso/02-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/casa-trancoso/03.webp",
+          "thumb": "images/work/casa-trancoso/03-t.webp",
+          "w": 2752,
+          "h": 1536
+        },
+        {
+          "src": "images/work/casa-trancoso/04.webp",
+          "thumb": "images/work/casa-trancoso/04-t.webp",
+          "w": 1792,
+          "h": 2400
+        }
+      ],
+      "videos": []
+    },
+    {
+      "slug": "biscayne-bay",
+      "category": "residencial",
+      "title": {
+        "pt": "Casa em Biscayne Bay",
+        "en": "Biscayne Bay House"
+      },
+      "location": {
+        "pt": "Miami, EUA",
+        "en": "Miami, USA"
+      },
+      "images": [
+        {
+          "src": "images/work/biscayne-bay/01.webp",
+          "thumb": "images/work/biscayne-bay/01-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/biscayne-bay/02.webp",
+          "thumb": "images/work/biscayne-bay/02-t.webp",
+          "w": 1792,
+          "h": 2400
+        }
+      ],
+      "videos": []
+    },
+    {
+      "slug": "residencial-porto-seguro",
+      "category": "empreendimento",
+      "title": {
+        "pt": "Residencial Porto Seguro",
+        "en": "Porto Seguro Residences"
+      },
+      "location": {
+        "pt": "Porto Seguro, Bahia",
+        "en": "Porto Seguro, Brazil"
+      },
+      "images": [
+        {
+          "src": "images/work/residencial-porto-seguro/01.webp",
+          "thumb": "images/work/residencial-porto-seguro/01-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/residencial-porto-seguro/02.webp",
+          "thumb": "images/work/residencial-porto-seguro/02-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/residencial-porto-seguro/03.webp",
+          "thumb": "images/work/residencial-porto-seguro/03-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/residencial-porto-seguro/04.webp",
+          "thumb": "images/work/residencial-porto-seguro/04-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/residencial-porto-seguro/05.webp",
+          "thumb": "images/work/residencial-porto-seguro/05-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/residencial-porto-seguro/06.webp",
+          "thumb": "images/work/residencial-porto-seguro/06-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/residencial-porto-seguro/07.webp",
+          "thumb": "images/work/residencial-porto-seguro/07-t.webp",
+          "w": 1792,
+          "h": 2400
+        }
+      ],
+      "videos": []
+    },
+    {
+      "slug": "casa-toscana",
+      "category": "residencial",
+      "title": {
+        "pt": "Casa Toscana",
+        "en": "Tuscan House"
+      },
+      "location": {
+        "pt": "Toscana, Itália",
+        "en": "Tuscany, Italy"
+      },
+      "images": [
+        {
+          "src": "images/work/casa-toscana/01.webp",
+          "thumb": "images/work/casa-toscana/01-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/casa-toscana/02.webp",
+          "thumb": "images/work/casa-toscana/02-t.webp",
+          "w": 2752,
+          "h": 1536
+        },
+        {
+          "src": "images/work/casa-toscana/03.webp",
+          "thumb": "images/work/casa-toscana/03-t.webp",
+          "w": 1792,
+          "h": 2400
+        }
+      ],
+      "videos": []
+    },
+    {
+      "slug": "casa-branca",
+      "category": "residencial",
+      "title": {
+        "pt": "Casa Branca",
+        "en": "White House"
+      },
+      "location": {
+        "pt": "Pensilvânia, EUA",
+        "en": "Pennsylvania, USA"
+      },
+      "images": [
+        {
+          "src": "images/work/casa-branca/01.webp",
+          "thumb": "images/work/casa-branca/01-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/casa-branca/02.webp",
+          "thumb": "images/work/casa-branca/02-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/casa-branca/03.webp",
+          "thumb": "images/work/casa-branca/03-t.webp",
+          "w": 1792,
+          "h": 2400
+        }
+      ],
+      "videos": []
+    },
+    {
+      "slug": "casa-na-mata",
+      "category": "residencial",
+      "title": {
+        "pt": "Casa na Mata",
+        "en": "Forest House"
+      },
+      "location": {
+        "pt": "Costa Rica",
+        "en": "Costa Rica"
+      },
+      "images": [
+        {
+          "src": "images/work/casa-na-mata/01.webp",
+          "thumb": "images/work/casa-na-mata/01-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/casa-na-mata/02.webp",
+          "thumb": "images/work/casa-na-mata/02-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/casa-na-mata/03.webp",
+          "thumb": "images/work/casa-na-mata/03-t.webp",
+          "w": 2752,
+          "h": 1536
+        }
+      ],
+      "videos": []
+    },
+    {
+      "slug": "cafe-new-york",
+      "category": "comercial",
+      "title": {
+        "pt": "Café em Nova York",
+        "en": "New York Café"
+      },
+      "location": {
+        "pt": "Nova York, EUA",
+        "en": "New York, USA"
+      },
+      "images": [
+        {
+          "src": "images/work/cafe-new-york/01.webp",
+          "thumb": "images/work/cafe-new-york/01-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/cafe-new-york/02.webp",
+          "thumb": "images/work/cafe-new-york/02-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/cafe-new-york/03.webp",
+          "thumb": "images/work/cafe-new-york/03-t.webp",
+          "w": 1792,
+          "h": 2400
+        }
+      ],
+      "videos": []
+    },
+    {
+      "slug": "residencia-aurora",
+      "category": "residencial",
+      "title": {
+        "pt": "Residência Aurora",
+        "en": "Aurora Residence"
+      },
+      "location": {
+        "pt": "São Paulo, Brasil",
+        "en": "São Paulo, Brazil"
+      },
+      "images": [
+        {
+          "src": "images/work/residencia-aurora/01.webp",
+          "thumb": "images/work/residencia-aurora/01-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/residencia-aurora/02.webp",
+          "thumb": "images/work/residencia-aurora/02-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/residencia-aurora/03.webp",
+          "thumb": "images/work/residencia-aurora/03-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/residencia-aurora/04.webp",
+          "thumb": "images/work/residencia-aurora/04-t.webp",
+          "w": 1792,
+          "h": 2400
+        }
+      ],
+      "videos": []
+    },
+    {
+      "slug": "alphaville-sp-i",
+      "category": "residencial",
+      "title": {
+        "pt": "Casa em Alphaville I",
+        "en": "Alphaville House I"
+      },
+      "location": {
+        "pt": "São Paulo, Brasil",
+        "en": "São Paulo, Brazil"
+      },
+      "images": [
+        {
+          "src": "images/work/alphaville-sp-i/01.webp",
+          "thumb": "images/work/alphaville-sp-i/01-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/alphaville-sp-i/02.webp",
+          "thumb": "images/work/alphaville-sp-i/02-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/alphaville-sp-i/03.webp",
+          "thumb": "images/work/alphaville-sp-i/03-t.webp",
+          "w": 1792,
+          "h": 2400
+        }
+      ],
+      "videos": []
+    },
+    {
+      "slug": "alphaville-salvador",
+      "category": "residencial",
+      "title": {
+        "pt": "Casa em Alphaville",
+        "en": "Alphaville House"
+      },
+      "location": {
+        "pt": "Salvador, Bahia",
+        "en": "Salvador, Brazil"
+      },
+      "images": [
+        {
+          "src": "images/work/alphaville-salvador/01.webp",
+          "thumb": "images/work/alphaville-salvador/01-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/alphaville-salvador/02.webp",
+          "thumb": "images/work/alphaville-salvador/02-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/alphaville-salvador/03.webp",
+          "thumb": "images/work/alphaville-salvador/03-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/alphaville-salvador/04.webp",
+          "thumb": "images/work/alphaville-salvador/04-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/alphaville-salvador/05.webp",
+          "thumb": "images/work/alphaville-salvador/05-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/alphaville-salvador/06.webp",
+          "thumb": "images/work/alphaville-salvador/06-t.webp",
+          "w": 1792,
+          "h": 2400
+        }
+      ],
+      "videos": []
+    },
+    {
+      "slug": "alphaville-sp-ii",
+      "category": "residencial",
+      "title": {
+        "pt": "Casa em Alphaville II",
+        "en": "Alphaville House II"
+      },
+      "location": {
+        "pt": "São Paulo, Brasil",
+        "en": "São Paulo, Brazil"
+      },
+      "images": [
+        {
+          "src": "images/work/alphaville-sp-ii/01.webp",
+          "thumb": "images/work/alphaville-sp-ii/01-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/alphaville-sp-ii/02.webp",
+          "thumb": "images/work/alphaville-sp-ii/02-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/alphaville-sp-ii/03.webp",
+          "thumb": "images/work/alphaville-sp-ii/03-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/alphaville-sp-ii/04.webp",
+          "thumb": "images/work/alphaville-sp-ii/04-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/alphaville-sp-ii/05.webp",
+          "thumb": "images/work/alphaville-sp-ii/05-t.webp",
+          "w": 1792,
+          "h": 2400
+        }
+      ],
+      "videos": [
+        {
+          "src": "images/work/alphaville-sp-ii/v1.mp4",
+          "poster": "images/work/alphaville-sp-ii/v1.webp"
+        }
+      ]
+    },
+    {
+      "slug": "piscina-salvador",
+      "category": "residencial",
+      "title": {
+        "pt": "Área de Lazer",
+        "en": "Pool & Leisure"
+      },
+      "location": {
+        "pt": "Salvador, Bahia",
+        "en": "Salvador, Brazil"
+      },
+      "images": [
+        {
+          "src": "images/work/piscina-salvador/01.webp",
+          "thumb": "images/work/piscina-salvador/01-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/piscina-salvador/02.webp",
+          "thumb": "images/work/piscina-salvador/02-t.webp",
+          "w": 1792,
+          "h": 2400
+        }
+      ],
+      "videos": []
+    },
+    {
+      "slug": "holanda",
+      "category": "empreendimento",
+      "title": {
+        "pt": "Edifício na Holanda",
+        "en": "Netherlands Building"
+      },
+      "location": {
+        "pt": "Holanda",
+        "en": "Netherlands"
+      },
+      "images": [
+        {
+          "src": "images/work/holanda/01.webp",
+          "thumb": "images/work/holanda/01-t.webp",
+          "w": 2752,
+          "h": 1536
+        }
+      ],
+      "videos": [
+        {
+          "src": "images/work/holanda/v1.mp4",
+          "poster": "images/work/holanda/v1.webp"
+        }
+      ]
+    },
+    {
+      "slug": "studios-porto-seguro",
+      "category": "empreendimento",
+      "title": {
+        "pt": "Studios Porto Seguro",
+        "en": "Porto Seguro Studios"
+      },
+      "location": {
+        "pt": "Porto Seguro, Bahia",
+        "en": "Porto Seguro, Brazil"
+      },
+      "images": [
+        {
+          "src": "images/work/studios-porto-seguro/01.webp",
+          "thumb": "images/work/studios-porto-seguro/01-t.webp",
+          "w": 3840,
+          "h": 2143
+        },
+        {
+          "src": "images/work/studios-porto-seguro/02.webp",
+          "thumb": "images/work/studios-porto-seguro/02-t.webp",
+          "w": 3093,
+          "h": 3840
+        },
+        {
+          "src": "images/work/studios-porto-seguro/03.webp",
+          "thumb": "images/work/studios-porto-seguro/03-t.webp",
+          "w": 3093,
+          "h": 3840
+        },
+        {
+          "src": "images/work/studios-porto-seguro/04.webp",
+          "thumb": "images/work/studios-porto-seguro/04-t.webp",
+          "w": 3093,
+          "h": 3840
+        },
+        {
+          "src": "images/work/studios-porto-seguro/05.webp",
+          "thumb": "images/work/studios-porto-seguro/05-t.webp",
+          "w": 3093,
+          "h": 3840
+        },
+        {
+          "src": "images/work/studios-porto-seguro/06.webp",
+          "thumb": "images/work/studios-porto-seguro/06-t.webp",
+          "w": 3093,
+          "h": 3840
+        },
+        {
+          "src": "images/work/studios-porto-seguro/07.webp",
+          "thumb": "images/work/studios-porto-seguro/07-t.webp",
+          "w": 3093,
+          "h": 3840
+        },
+        {
+          "src": "images/work/studios-porto-seguro/08.webp",
+          "thumb": "images/work/studios-porto-seguro/08-t.webp",
+          "w": 3093,
+          "h": 3840
+        },
+        {
+          "src": "images/work/studios-porto-seguro/09.webp",
+          "thumb": "images/work/studios-porto-seguro/09-t.webp",
+          "w": 3093,
+          "h": 3840
+        }
+      ],
+      "videos": []
+    },
+    {
+      "slug": "vista-mar",
+      "category": "residencial",
+      "title": {
+        "pt": "Casa Vista Mar",
+        "en": "Ocean View House"
+      },
+      "location": {
+        "pt": "Austrália",
+        "en": "Australia"
+      },
+      "images": [
+        {
+          "src": "images/work/vista-mar/01.webp",
+          "thumb": "images/work/vista-mar/01-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/vista-mar/02.webp",
+          "thumb": "images/work/vista-mar/02-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/vista-mar/03.webp",
+          "thumb": "images/work/vista-mar/03-t.webp",
+          "w": 1792,
+          "h": 2400
+        }
+      ],
+      "videos": []
+    },
+    {
+      "slug": "casa-fortaleza",
+      "category": "residencial",
+      "title": {
+        "pt": "Casa em Fortaleza",
+        "en": "Fortaleza House"
+      },
+      "location": {
+        "pt": "Fortaleza, Ceará",
+        "en": "Fortaleza, Brazil"
+      },
+      "images": [
+        {
+          "src": "images/work/casa-fortaleza/01.webp",
+          "thumb": "images/work/casa-fortaleza/01-t.webp",
+          "w": 2867,
+          "h": 3840
+        },
+        {
+          "src": "images/work/casa-fortaleza/02.webp",
+          "thumb": "images/work/casa-fortaleza/02-t.webp",
+          "w": 2867,
+          "h": 3840
+        },
+        {
+          "src": "images/work/casa-fortaleza/03.webp",
+          "thumb": "images/work/casa-fortaleza/03-t.webp",
+          "w": 2867,
+          "h": 3840
+        },
+        {
+          "src": "images/work/casa-fortaleza/04.webp",
+          "thumb": "images/work/casa-fortaleza/04-t.webp",
+          "w": 2867,
+          "h": 3840
+        },
+        {
+          "src": "images/work/casa-fortaleza/05.webp",
+          "thumb": "images/work/casa-fortaleza/05-t.webp",
+          "w": 2867,
+          "h": 3840
+        },
+        {
+          "src": "images/work/casa-fortaleza/06.webp",
+          "thumb": "images/work/casa-fortaleza/06-t.webp",
+          "w": 2867,
+          "h": 3840
+        },
+        {
+          "src": "images/work/casa-fortaleza/07.webp",
+          "thumb": "images/work/casa-fortaleza/07-t.webp",
+          "w": 2867,
+          "h": 3840
+        },
+        {
+          "src": "images/work/casa-fortaleza/08.webp",
+          "thumb": "images/work/casa-fortaleza/08-t.webp",
+          "w": 2867,
+          "h": 3840
+        },
+        {
+          "src": "images/work/casa-fortaleza/09.webp",
+          "thumb": "images/work/casa-fortaleza/09-t.webp",
+          "w": 2867,
+          "h": 3840
+        },
+        {
+          "src": "images/work/casa-fortaleza/10.webp",
+          "thumb": "images/work/casa-fortaleza/10-t.webp",
+          "w": 2867,
+          "h": 3840
+        }
+      ],
+      "videos": []
+    },
+    {
+      "slug": "casa-arraial",
+      "category": "residencial",
+      "title": {
+        "pt": "Casa em Arraial",
+        "en": "Arraial House"
+      },
+      "location": {
+        "pt": "Arraial d'Ajuda, Bahia",
+        "en": "Arraial d'Ajuda, Brazil"
+      },
+      "images": [
+        {
+          "src": "images/work/casa-arraial/01.webp",
+          "thumb": "images/work/casa-arraial/01-t.webp",
+          "w": 2867,
+          "h": 3840
+        },
+        {
+          "src": "images/work/casa-arraial/02.webp",
+          "thumb": "images/work/casa-arraial/02-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/casa-arraial/03.webp",
+          "thumb": "images/work/casa-arraial/03-t.webp",
+          "w": 1792,
+          "h": 2400
+        }
+      ],
+      "videos": []
+    },
+    {
+      "slug": "estudos",
+      "category": "estudo",
+      "title": {
+        "pt": "Estudos de Luz e Material",
+        "en": "Light & Material Studies"
+      },
+      "location": {
+        "pt": "Estúdio CarmoViz",
+        "en": "CarmoViz Studio"
+      },
+      "images": [
+        {
+          "src": "images/work/estudos/01.webp",
+          "thumb": "images/work/estudos/01-t.webp",
+          "w": 2867,
+          "h": 3840
+        },
+        {
+          "src": "images/work/estudos/02.webp",
+          "thumb": "images/work/estudos/02-t.webp",
+          "w": 2867,
+          "h": 3840
+        },
+        {
+          "src": "images/work/estudos/03.webp",
+          "thumb": "images/work/estudos/03-t.webp",
+          "w": 2867,
+          "h": 3840
+        },
+        {
+          "src": "images/work/estudos/04.webp",
+          "thumb": "images/work/estudos/04-t.webp",
+          "w": 2867,
+          "h": 3840
+        },
+        {
+          "src": "images/work/estudos/05.webp",
+          "thumb": "images/work/estudos/05-t.webp",
+          "w": 2867,
+          "h": 3840
+        },
+        {
+          "src": "images/work/estudos/06.webp",
+          "thumb": "images/work/estudos/06-t.webp",
+          "w": 2867,
+          "h": 3840
+        },
+        {
+          "src": "images/work/estudos/07.webp",
+          "thumb": "images/work/estudos/07-t.webp",
+          "w": 2867,
+          "h": 3840
+        },
+        {
+          "src": "images/work/estudos/08.webp",
+          "thumb": "images/work/estudos/08-t.webp",
+          "w": 2867,
+          "h": 3840
+        },
+        {
+          "src": "images/work/estudos/09.webp",
+          "thumb": "images/work/estudos/09-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/estudos/10.webp",
+          "thumb": "images/work/estudos/10-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/estudos/11.webp",
+          "thumb": "images/work/estudos/11-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/estudos/12.webp",
+          "thumb": "images/work/estudos/12-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/estudos/13.webp",
+          "thumb": "images/work/estudos/13-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/estudos/14.webp",
+          "thumb": "images/work/estudos/14-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/estudos/15.webp",
+          "thumb": "images/work/estudos/15-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/estudos/16.webp",
+          "thumb": "images/work/estudos/16-t.webp",
+          "w": 1264,
+          "h": 1600
+        },
+        {
+          "src": "images/work/estudos/17.webp",
+          "thumb": "images/work/estudos/17-t.webp",
+          "w": 2752,
+          "h": 1536
+        },
+        {
+          "src": "images/work/estudos/18.webp",
+          "thumb": "images/work/estudos/18-t.webp",
+          "w": 2752,
+          "h": 1536
+        },
+        {
+          "src": "images/work/estudos/19.webp",
+          "thumb": "images/work/estudos/19-t.webp",
+          "w": 2752,
+          "h": 1536
+        },
+        {
+          "src": "images/work/estudos/20.webp",
+          "thumb": "images/work/estudos/20-t.webp",
+          "w": 1792,
+          "h": 2400
+        },
+        {
+          "src": "images/work/estudos/21.webp",
+          "thumb": "images/work/estudos/21-t.webp",
+          "w": 1792,
+          "h": 2400
+        }
+      ],
+      "videos": []
+    }
+  ]
 }
