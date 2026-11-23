@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todos os projetos — CarmoViz Studio</title>
+  <meta name="description" content="Portfólio completo da CarmoViz Studio — todos os projetos de visualização arquitetônica, com galeria de cada um.">
+  <meta name="theme-color" content="#050505">
+  <meta property="og:title" content="CarmoViz Studio — Archviz Premium">
+  <meta property="og:description" content="Renders fotorrealistas, animação arquitetônica e tour virtual 360°.">
+  <meta property="og:image" content="assets/showreel.webp">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Montserrat:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="projects">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="hex" viewBox="453 221 3093 3572">
+    <polygon points="3545.94,1114.27 1999.47,221.42 453,1114.27 453,2899.99 1999.47,3792.84 3545.94,2899.99 3112.93,2649.99 1999.47,3292.84 886.01,2649.99 886.01,1364.27 1999.47,721.42 3112.93,1364.27"/>
+  </symbol>
+</svg>
+
+<div class="cursor" id="cursor" aria-hidden="true"><span class="cursor-dot"><span class="cursor-label" id="cursor-label"></span></span></div>
+
+<!-- NAVEGAÇÃO -->
+<header class="nav" id="nav">
+  <a href="index.html" class="nav-logo" aria-label="CarmoViz Studio">
+    <svg class="nav-hex"><use href="#hex"/></svg>
+    <span><b>CARMOVIZ</b> STUDIO</span>
+  </a>
+  <nav class="nav-links" aria-label="Seções">
+    <a href="projetos.html" aria-current="page" data-pt="Projetos" data-en="Projects">Projetos</a>
+    <a href="index.html#process" data-pt="Processo" data-en="Process">Processo</a>
+    <a href="index.html#services" data-pt="Serviços" data-en="Services">Serviços</a>
+    <a href="index.html#about" data-pt="Estúdio" data-en="Studio">Estúdio</a>
+  </nav>
+  <div class="nav-right">
+    <div class="lang" role="group" aria-label="Idioma">
+      <button type="button" class="lang-btn is-active" data-lang="pt">PT</button>
+      <button type="button" class="lang-btn" data-lang="en">EN</button>
+    </div>
+    <a href="index.html#contact" class="nav-cta"><span data-pt="Orçamento" data-en="Get a quote">Orçamento</span></a>
+    <button type="button" class="nav-burger" id="burger" aria-expanded="false" aria-controls="menu" data-aria-pt="Abrir menu" data-aria-en="Open menu" aria-label="Abrir menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="menu" id="menu" aria-hidden="true">
+  <nav class="menu-links">
+    <a href="projetos.html"><span data-pt="Projetos" data-en="Projects">Projetos</span></a>
+    <a href="index.html#process"><span data-pt="Processo" data-en="Process">Processo</span></a>
+    <a href="index.html#services"><span data-pt="Serviços" data-en="Services">Serviços</span></a>
+    <a href="index.html#about"><span data-pt="Estúdio" data-en="Studio">Estúdio</span></a>
+    <a href="index.html#contact"><span data-pt="Contato" data-en="Contact">Contato</span></a>
+  </nav>
+  <div class="menu-foot">
+    <div class="lang" role="group" aria-label="Idioma">
+      <button type="button" class="lang-btn is-active" data-lang="pt">PT</button>
+      <button type="button" class="lang-btn" data-lang="en">EN</button>
+    </div>
+    <div class="menu-social">
+      <a href="https://instagram.com/carmoviz" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://wa.me/5573999210436" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="https://www.linkedin.com/in/carmovinicius/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</div>
+
+<main>
+<section class="archive" id="archive-top">
+  <div class="archive-head">
+    <p class="eyebrow"><span data-pt="Portfólio completo" data-en="Full portfolio">Portfólio completo</span></p>
+    <h1 class="section-title"><span class="ln"><span data-pt="Todos os" data-en="All">Todos os</span></span> <span class="ln gold"><span data-pt="projetos." data-en="projects.">projetos.</span></span></h1>
+    <p class="archive-count" id="archive-count"></p>
+  </div>
+  <div class="filters" id="filters">
+    <button type="button" class="filter is-active" data-filter="all"><span data-pt="Todos" data-en="All">Todos</span></button>
+    <button type="button" class="filter" data-filter="residencial"><span data-pt="Residências" data-en="Residences">Residências</span></button>
+    <button type="button" class="filter" data-filter="empreendimento"><span data-pt="Empreendimentos" data-en="Developments">Empreendimentos</span></button>
+    <button type="button" class="filter" data-filter="comercial"><span data-pt="Comercial" data-en="Commercial">Comercial</span></button>
+    <button type="button" class="filter" data-filter="estudo"><span data-pt="Estudos" data-en="Studies">Estudos</span></button>
+  </div>
+  <div id="archive"></div>
+  <div class="work-more"><a href="index.html#contact" class="btn btn-gold"><span data-pt="Solicitar orçamento" data-en="Request a quote">Solicitar orçamento</span></a></div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="footer-top">
+    <a href="index.html" class="nav-logo" aria-label="CarmoViz Studio"><svg class="nav-hex"><use href="#hex"/></svg><span><b>CARMOVIZ</b> STUDIO</span></a>
+    <a href="#archive-top" class="footer-top-btn"><span data-pt="Voltar ao topo" data-en="Back to top">Voltar ao topo</span> ↑</a>
+  </div>
+  <div class="footer-legal-title">LEGAL</div>
+  <div class="footer-links-row">
+    <a href="centro-juridico.html" data-pt="Centro Jurídico e de Confiança" data-en="Trust & Legal Center">Centro Jurídico e de Confiança</a>
+    <a href="termos.html" data-pt="Termos de Uso" data-en="Terms of Use">Termos de Uso</a>
+    <a href="privacidade.html" data-pt="Política de Privacidade" data-en="Privacy Policy">Política de Privacidade</a>
+    <a href="cookies.html" data-pt="Política de Cookies" data-en="Cookie Policy">Política de Cookies</a>
+    <a href="propriedade-intelectual.html" data-pt="Propriedade Intelectual" data-en="Intellectual Property">Propriedade Intelectual</a>
+    <a href="confidencialidade.html" data-pt="Confidencialidade do Cliente" data-en="Client Confidentiality">Confidencialidade do Cliente</a>
+    <a href="acessibilidade.html" data-pt="Acessibilidade" data-en="Accessibility">Acessibilidade</a>
+    <a href="seguranca.html" data-pt="Segurança" data-en="Security">Segurança</a>
+    <a href="index.html#contact" data-pt="Contato" data-en="Contact">Contato</a>
+  </div>
+  <div class="footer-divider"></div>
+  <p class="footer-copy" data-pt="© 2026 CarmoViz Studio. Todos os direitos reservados." data-en="© 2026 CarmoViz Studio. All rights reserved.">© 2026 CarmoViz Studio. Todos os direitos reservados.</p>
+  <div class="footer-bottom-row">
+    <div class="footer-info">Carmoviz Studio LTDA · CNPJ: 67.898.739/0001-33 · 2026</div>
+    <div class="footer-socials">
+      <a href="https://instagram.com/carmoviz" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <span class="footer-link-sep">·</span>
+      <a href="https://www.linkedin.com/in/carmovinicius/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<!-- GALERIA DO PROJETO -->
+<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="viewer-title">
+  <div class="viewer-top">
+    <div><h3 class="viewer-title" id="viewer-title"></h3><p class="viewer-loc" id="viewer-loc"></p></div>
+    <div class="viewer-count" id="viewer-count"></div>
+    <button type="button" class="viewer-close" id="viewer-close" data-aria-pt="Fechar" data-aria-en="Close" aria-label="Fechar">✕</button>
+  </div>
+  <div class="viewer-stage" id="viewer-stage"></div>
+  <button type="button" class="viewer-arrow prev" id="viewer-prev" data-aria-pt="Anterior" data-aria-en="Previous" aria-label="Anterior">←</button>
+  <button type="button" class="viewer-arrow next" id="viewer-next" data-aria-pt="Próxima" data-aria-en="Next" aria-label="Próxima">→</button>
+  <div class="viewer-thumbs" id="viewer-thumbs"></div>
+</div>
+
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>

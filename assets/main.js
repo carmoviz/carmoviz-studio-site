@@ -118,11 +118,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   try { projects = (await (await fetch('projects.json', { cache: 'no-cache' })).json()).projects; }
   catch { projects = []; }
 
-  renderHero();
-  renderFeature();
-  renderGrid();
-  renderSteps();
-  renderServices();
+  const ARCHIVE = document.body.dataset.page === 'projects';
+  if (ARCHIVE) renderArchive();
+  else { renderHero(); renderFeature(); renderGrid(); renderSteps(); renderServices(); }
   applyLang(lang);
 
   initNav();
@@ -130,6 +128,12 @@ document.addEventListener('DOMContentLoaded', async () => {
   initCursor();
   initViewer();
   initFilters();
+  if (ARCHIVE) {
+    document.body.classList.add('is-ready');
+    if (lenis) lenis.start();
+    initArchiveMotion();
+    return;
+  }
   initCountry();
   initForm();
 
@@ -150,7 +154,7 @@ function applyLang(l) {
   $$('.lang-btn').forEach(b => b.classList.toggle('is-active', b.dataset.lang === l));
   splitWords();
   updateHeroNow();
-  if ($('#country-select').classList.contains('open')) renderCountries($('#country-search').value);
+  if ($('#country-select')?.classList.contains('open')) renderCountries($('#country-search').value);
   if (window.ScrollTrigger) ScrollTrigger.refresh();
 }
 document.addEventListener('click', (e) => {
@@ -199,6 +203,38 @@ function renderGrid() {
   layoutGrid();
 }
 
+/* página "Todos os projetos": cada projeto com todas as imagens */
+function renderArchive() {
+  const total = projects.reduce((n, p) => n + p.images.length + p.videos.length, 0);
+  $('#archive-count').innerHTML = `${projects.length} <span ${bi('projetos', 'projects')}</span> · ${total} <span ${bi('imagens', 'images')}</span>`;
+  $('#archive').innerHTML = projects.map((p, k) => {
+    const cat = CAT[p.category] || ['', ''];
+    const items = [...p.images.map(m => ({ thumb: m.thumb, r: m.w / m.h })),
+                   ...p.videos.map(v => ({ thumb: v.poster, r: 16 / 9, video: true }))];
+    return `<article class="proj" data-slug="${p.slug}" data-cat="${p.category}">
+      <header class="proj-head">
+        <span class="proj-num">${String(k + 1).padStart(2, '0')}</span>
+        <h2 class="proj-title" ${bi(p.title.pt, p.title.en)}</h2>
+        <span class="proj-loc" ${bi(p.location.pt, p.location.en)}</span>
+        <span class="proj-cat" ${bi(cat[0], cat[1])}</span>
+      </header>
+      <div class="proj-imgs">${items.map((it, i) =>
+        `<button type="button" class="proj-img${it.video ? ' is-video' : ''}" data-i="${i}" data-cursor style="--r:${it.r.toFixed(3)}" aria-label="${esc(p.title.pt)} — ${i + 1}"><img src="${it.thumb}" alt="" loading="lazy"></button>`).join('')}
+      </div>
+    </article>`;
+  }).join('');
+}
+
+function initArchiveMotion() {
+  if (REDUCE) return;
+  gsap.from('.archive-head .ln > span', { yPercent: 110, duration: 1.2, stagger: 0.08, ease: 'expo.out' });
+  gsap.from(['.archive-head .eyebrow', '#archive-count', '#filters'], { opacity: 0, y: 20, duration: 1, stagger: 0.08, ease: 'expo.out', delay: 0.2 });
+  $$('.proj').forEach(p => {
+    gsap.from($('.proj-head', p).children, { y: 30, opacity: 0, duration: 1, stagger: 0.06, ease: 'expo.out', scrollTrigger: { trigger: p, start: 'top 88%' } });
+    gsap.from($$('.proj-img', p), { y: 50, opacity: 0, duration: 1, stagger: 0.04, ease: 'expo.out', scrollTrigger: { trigger: $('.proj-imgs', p), start: 'top 90%' } });
+  });
+}
+
 /* linhas da grade: 7+5 · 4+4+4 · 5+7 (12 colunas); a última linha sempre fecha */
 const ROWS = [[7, 5], [4, 4, 4], [5, 7]];
 function layoutGrid() {
@@ -243,6 +279,7 @@ function renderServices() {
 let wordsTween = null;
 function splitWords() {
   const el = $('.reveal-words');
+  if (!el) return;
   el.innerHTML = el.textContent.split(/\s+/).filter(Boolean).map(w => `<span class="w">${esc(w)}</span>`).join(' ');
   if (wordsTween) { wordsTween.scrollTrigger.kill(); wordsTween.kill(); wordsTween = null; }
   if (REDUCE || !window.ScrollTrigger || !document.body.classList.contains('is-ready')) return;
@@ -463,7 +500,7 @@ function initMenu() {
 /* ── CURSOR + PRÉVIA DOS SERVIÇOS ──────────────────────── */
 function initCursor() {
   // acordeão dos serviços funciona em qualquer dispositivo
-  $('#svc-list').addEventListener('click', (e) => {
+  $('#svc-list')?.addEventListener('click', (e) => {
     const head = e.target.closest('.svc-head');
     if (!head) return;
     const svc = head.parentElement, open = !svc.classList.contains('is-open');
@@ -476,7 +513,7 @@ function initCursor() {
   const cur = $('#cursor'), label = $('#cursor-label');
   const xTo = gsap.quickTo(cur, 'x', { duration: 0.35, ease: 'power3' });
   const yTo = gsap.quickTo(cur, 'y', { duration: 0.35, ease: 'power3' });
-  const prev = $('#svc-preview');
+  const prev = $('#svc-preview') || document.createElement('div');
   const pxTo = gsap.quickTo(prev, 'x', { duration: 0.6, ease: 'power3' });
   const pyTo = gsap.quickTo(prev, 'y', { duration: 0.6, ease: 'power3' });
   addEventListener('pointermove', (e) => {
@@ -505,17 +542,17 @@ function initCursor() {
 
 /* ── FILTROS ───────────────────────────────────────────── */
 function initFilters() {
-  $('#filters').addEventListener('click', (e) => {
+  $('#filters')?.addEventListener('click', (e) => {
     const b = e.target.closest('.filter');
     if (!b) return;
     $$('.filter').forEach(f => f.classList.toggle('is-active', f === b));
     const f = b.dataset.filter;
-    const shown = $$('.card').filter(c => {
+    const shown = $$('.card, .proj').filter(c => {
       const on = f === 'all' || c.dataset.cat === f;
       c.classList.toggle('is-hidden', !on);
       return on;
     });
-    layoutGrid();
+    if ($('#grid')) layoutGrid();
     if (!REDUCE) gsap.fromTo(shown, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8, stagger: 0.05, ease: 'expo.out', overwrite: true });
     ScrollTrigger.refresh();
   });
@@ -525,11 +562,13 @@ function initFilters() {
 let vItems = [], vIndex = 0, vProject = null, vReturn = null;
 function initViewer() {
   const open = (e) => {
-    const card = e.target.closest('.card, .fcard');
+    const card = e.target.closest('.card, .fcard, .proj-img');
     if (!card || (e.type === 'keydown' && e.key !== 'Enter')) return;
-    openViewer(bySlug(card.dataset.slug), card);
+    const slug = card.dataset.slug || card.closest('.proj').dataset.slug;
+    openViewer(bySlug(slug), card, +(card.dataset.i || 0));
   };
-  ['#grid', '#feature-track'].forEach(s => { $(s).addEventListener('click', open); $(s).addEventListener('keydown', open); });
+  ['#grid', '#feature-track', '#archive'].map(s => $(s)).filter(Boolean)
+    .forEach(el => { el.addEventListener('click', open); el.addEventListener('keydown', open); });
   $('#viewer-close').addEventListener('click', closeViewer);
   $('#viewer-prev').addEventListener('click', () => showItem(vIndex - 1));
   $('#viewer-next').addEventListener('click', () => showItem(vIndex + 1));
@@ -549,7 +588,7 @@ function initViewer() {
     if (Math.abs(dx) > 50) showItem(vIndex + (dx < 0 ? 1 : -1));
   });
 }
-function openViewer(p, from) {
+function openViewer(p, from, start = 0) {
   if (!p) return;
   vProject = p; vReturn = from;
   vItems = [...p.images.map(i => ({ type: 'img', ...i })), ...p.videos.map(v => ({ type: 'video', ...v, thumb: v.poster }))];
@@ -563,7 +602,8 @@ function openViewer(p, from) {
   document.body.classList.add('is-locked');
   if (lenis) lenis.stop();
   gsap.to(v, { opacity: 1, duration: REDUCE ? 0 : 0.5, ease: 'power2.out' });
-  showItem(0, true);
+  vIndex = start;
+  showItem(start, true);
   $('#viewer-close').focus();
 }
 function closeViewer() {
